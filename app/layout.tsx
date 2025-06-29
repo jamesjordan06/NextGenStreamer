@@ -6,7 +6,6 @@ import Footer from '@/components/Footer'
 import AffiliateDisclaimer from '@/components/AffiliateDisclaimer'
 import CookieBanner from '@/components/CookieBanner'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -52,21 +51,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        {/* Google Analytics - Direct Implementation */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-P9TMPE87N7"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-P9TMPE87N7');
-          `}
-        </Script>
-      </head>
       <body className={inter.className}>
         <GoogleAnalytics />
         <Navigation />

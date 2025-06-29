@@ -13,14 +13,13 @@ export default function GoogleAnalytics() {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      const consent = localStorage.getItem('cookie-consent')
-      if (consent === 'accepted') {
-        window.gtag('config', 'G-P9TMPE87N7', {
-          page_path: pathname,
-        })
-        console.log('📊 Page view tracked:', pathname)
-      }
+    // Only track if consent given and gtag is loaded
+    const consent = localStorage.getItem('cookie-consent')
+    if (consent === 'accepted' && typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'G-P9TMPE87N7', {
+        page_path: pathname,
+      })
+      console.log('📊 Page view tracked:', pathname)
     }
   }, [pathname])
 
