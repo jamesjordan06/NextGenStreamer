@@ -1,3 +1,4 @@
+// components/AffiliateButton.tsx
 import React from "react";
 
 export default function AffiliateButton({ href, label }: { href: string; label?: string }) {
