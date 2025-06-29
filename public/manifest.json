@@ -1,0 +1,17 @@
+{
+  "name": "NextGenStreamer - Creator Gear & Equipment",
+  "short_name": "NextGenStreamer",
+  "description": "Professional creator gear and equipment for content creators",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+} 
