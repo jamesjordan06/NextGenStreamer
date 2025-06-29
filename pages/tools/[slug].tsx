@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import AffiliateButton from "@/components/AffiliateButton";
+import AffiliateButton from "../../components/AffiliateButton";
 import Head from "next/head";
 
 const components = {
