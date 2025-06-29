@@ -3,75 +3,26 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-    dataLayer: any[]
-  }
-}
-
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
-  const [consentGiven, setConsentGiven] = useState<boolean | null>(null)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent')
     if (consent === null) {
       setShowBanner(true)
-    } else {
-      setConsentGiven(consent === 'accepted')
-      if (consent === 'accepted') {
-        loadGoogleAnalytics()
-      }
     }
   }, [])
 
-  const loadGoogleAnalytics = () => {
-    // Initialize dataLayer first
-    window.dataLayer = window.dataLayer || []
-    
-    // Define gtag function
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args)
-    }
-    window.gtag = gtag
-
-    // Set timestamp
-    gtag('js', new Date())
-
-    // Load the Google Analytics script
-    const script = document.createElement('script')
-    script.async = true
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-P9TMPE87N7'
-    
-    script.onload = () => {
-      // Configure GA with basic settings
-      gtag('config', 'G-P9TMPE87N7')
-      
-      // Send initial page view
-      gtag('event', 'page_view', {
-        page_title: document.title,
-        page_location: window.location.href
-      })
-
-      console.log('✅ Google Analytics loaded and page view sent')
-    }
-    
-    document.head.appendChild(script)
-  }
-
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted')
-    setConsentGiven(true)
     setShowBanner(false)
-    loadGoogleAnalytics()
+    console.log('✅ Cookies accepted - Google Analytics should be tracking')
   }
 
   const handleReject = () => {
     localStorage.setItem('cookie-consent', 'rejected')
-    setConsentGiven(false)
     setShowBanner(false)
-    console.log('❌ Google Analytics tracking disabled')
+    console.log('❌ Cookies rejected')
   }
 
   if (!showBanner) return null
