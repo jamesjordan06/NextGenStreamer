@@ -1,22 +1,57 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { MDXRemote } from 'next-mdx-remote';
-import { getAllSlugs, getPostBySlug } from '../../lib/mdx';
-import AffiliateButton from '../../components/AffiliateButton';
+// pages/tools/[slug].tsx
 
-const components = { AffiliateButton };
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
+import Head from "next/head";
+
+export default function ToolPage({ source, frontMatter }) {
+  return (
+    <>
+      <Head>
+        <title>{frontMatter.title}</title>
+        <meta name="description" content={frontMatter.description} />
+      </Head>
+      <main className="prose mx-auto px-6 py-12">
+        <h1>{frontMatter.title}</h1>
+        <MDXRemote {...source} />
+      </main>
+    </>
+  );
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = getAllSlugs().filter((s) => !s.startsWith('best-ai-tools'));
-  const paths = slugs.map((slug) => ({ params: { slug } }));
-  return { paths, fallback: false };
+  const files = fs.readdirSync(path.join("content"));
+
+  const paths = files.map((filename) => ({
+    params: {
+      slug: filename.replace(".mdx", ""),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string;
-  const post = await getPostBySlug(slug);
-  return { props: { ...post } };
-};
+  const slug = params.slug as string;
+  const markdownWithMeta = fs.readFileSync(
+    path.join("content", slug + ".mdx"),
+    "utf-8"
+  );
 
-export default function ToolPage({ mdxSource, frontMatter }: any) {
-  return <MDXRemote {...mdxSource} components={components} />;
-}
+  const { data: frontMatter, content } = matter(markdownWithMeta);
+  const mdxSource = await serialize(content);
+
+  return {
+    props: {
+      source: mdxSource,
+      frontMatter,
+    },
+  };
+};
