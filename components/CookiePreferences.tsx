@@ -2,6 +2,12 @@
 
 import { useState, useEffect } from 'react'
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
 export default function CookiePreferences() {
   const [currentConsent, setCurrentConsent] = useState<string | null>(null)
   const [showSuccess, setShowSuccess] = useState(false)
@@ -11,16 +17,52 @@ export default function CookiePreferences() {
     setCurrentConsent(consent)
   }, [])
 
+  const updateConsentMode = (hasConsent: boolean) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      if (hasConsent) {
+        // Update consent to granted
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          personalization_storage: 'granted'
+        })
+        
+        // Send consent granted event
+        window.gtag('event', 'consent_updated', {
+          event_category: 'engagement',
+          event_label: 'cookie_preferences_accepted'
+        })
+      } else {
+        // Update consent to denied (conversion modeling will still work)
+        window.gtag('consent', 'update', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied', 
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          personalization_storage: 'denied'
+        })
+        
+        // Send consent denied event  
+        window.gtag('event', 'consent_updated', {
+          event_category: 'engagement',
+          event_label: 'cookie_preferences_rejected'
+        })
+      }
+    }
+  }
+
   const updateConsent = (newConsent: string) => {
     localStorage.setItem('cookie-consent', newConsent)
     setCurrentConsent(newConsent)
     setShowSuccess(true)
     
+    // Update Google Consent Mode
+    updateConsentMode(newConsent === 'accepted')
+    
     // Show success message briefly
     setTimeout(() => setShowSuccess(false), 3000)
-    
-    // Reload page to apply new settings
-    setTimeout(() => window.location.reload(), 1000)
   }
 
   return (
@@ -63,9 +105,9 @@ export default function CookiePreferences() {
             <div className="border border-gray-200 rounded-lg p-3">
               <div className="flex justify-between items-start">
                 <div>
-                  <h5 className="font-medium text-gray-900">Analytics Cookies</h5>
-                  <p className="text-sm text-gray-600">Help us understand how visitors interact with our website</p>
-                  <p className="text-xs text-gray-500 mt-1">Google Analytics (G-P9TMPE87N7)</p>
+                  <h5 className="font-medium text-gray-900">Analytics & Consent Mode</h5>
+                  <p className="text-sm text-gray-600">Google Analytics with Consent Mode for conversion modeling and personalized ads</p>
+                  <p className="text-xs text-gray-500 mt-1">Google Analytics (G-P9TMPE87N7) + Consent Mode v2</p>
                 </div>
                 <span className={`px-2 py-1 rounded text-xs font-medium ${
                   currentConsent === 'accepted' 
@@ -106,7 +148,7 @@ export default function CookiePreferences() {
 
         {showSuccess && (
           <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded">
-            ✅ Cookie preferences updated! The page will refresh to apply changes.
+            ✅ Cookie preferences updated! Google Consent Mode has been notified of your choice.
           </div>
         )}
       </div>
