@@ -2,7 +2,11 @@ import Link from 'next/link';
 import { getAllSlugs } from '../lib/mdx';
 
 export async function getStaticProps() {
-  const slugs = getAllSlugs().filter((s) => s !== 'best-ai-tools-for-freelancers');
+  const slugs = getAllSlugs().filter(
+    (s) =>
+      s !== 'best-ai-tools-for-freelancers' &&
+      s !== 'best-ai-tools-for-social-media-managers'
+  );
   return { props: { slugs } };
 }
 
