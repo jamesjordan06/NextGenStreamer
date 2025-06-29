@@ -6,7 +6,12 @@ import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import AffiliateButton from "@/components/AffiliateButton";
 import Head from "next/head";
+
+const components = {
+  AffiliateButton,
+};
 
 export default function ToolPage({ source, frontMatter }) {
   return (
@@ -17,7 +22,7 @@ export default function ToolPage({ source, frontMatter }) {
       </Head>
       <main className="prose mx-auto px-6 py-12">
         <h1>{frontMatter.title}</h1>
-        <MDXRemote {...source} />
+        <MDXRemote {...source} components={components} />
       </main>
     </>
   );

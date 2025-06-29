@@ -1,18 +1,14 @@
-import Link from 'next/link';
-interface Props {
-  href: string;
-  children: string;
-}
+import React from "react";
 
-export default function AffiliateButton({ href, children }: Props) {
+export default function AffiliateButton({ href, label }: { href: string; label?: string }) {
   return (
-    <Link
+    <a
       href={href}
-      className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
       target="_blank"
-      rel="nofollow noopener"
+      rel="noopener noreferrer"
+      className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
     >
-      {children}
-    </Link>
+      {label || "Check it out"}
+    </a>
   );
 }
