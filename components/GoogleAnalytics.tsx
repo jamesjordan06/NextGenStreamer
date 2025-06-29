@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { GA_ID } from '../lib/analytics'
 
 declare global {
   interface Window {
@@ -14,7 +15,7 @@ export default function GoogleAnalytics() {
 
   useEffect(() => {
     // Track page views on route change
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' && window.gtag && GA_ID) {
       // Check if user has accepted cookies
       const consent = localStorage.getItem('cookie-consent')
       if (consent === 'accepted') {
