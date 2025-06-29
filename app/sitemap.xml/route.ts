@@ -1,135 +1,136 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
+  const baseUrl = (process.env.SITE_URL || 'https://nextgenstreamer.com').replace(/\/$/, '')
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" 
-        xmlns:xhtml="http://www.w3.org/1999/xhtml" 
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" 
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <url>
-    <loc>https://nextgenstreamer.com</loc>
+    <loc>${baseUrl}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/about</loc>
+    <loc>${baseUrl}/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products</loc>
+    <loc>${baseUrl}/products</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/lists/best-microphones-2025</loc>
+    <loc>${baseUrl}/lists/best-microphones-2025</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/legal/privacy</loc>
+    <loc>${baseUrl}/legal/privacy</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/legal/disclaimer</loc>
+    <loc>${baseUrl}/legal/disclaimer</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/audio-technica-at2020</loc>
+    <loc>${baseUrl}/products/audio-technica-at2020</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/blue-yeti-blackout</loc>
+    <loc>${baseUrl}/products/blue-yeti-blackout</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/elgato-stream-deck</loc>
+    <loc>${baseUrl}/products/elgato-stream-deck</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/fifine-gaming-mixer</loc>
+    <loc>${baseUrl}/products/fifine-gaming-mixer</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/innogear-boom-arm</loc>
+    <loc>${baseUrl}/products/innogear-boom-arm</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/led-light-panel</loc>
+    <loc>${baseUrl}/products/led-light-panel</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/logitech-brio</loc>
+    <loc>${baseUrl}/products/logitech-brio</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/logitech-mx-master-3s-mouse</loc>
+    <loc>${baseUrl}/products/logitech-mx-master-3s-mouse</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/logitech-webcam</loc>
+    <loc>${baseUrl}/products/logitech-webcam</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/shure-sm7b</loc>
+    <loc>${baseUrl}/products/shure-sm7b</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/sony-wh-ch520-headphones</loc>
+    <loc>${baseUrl}/products/sony-wh-ch520-headphones</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://nextgenstreamer.com/products/weilisi-desk-ring-light</loc>
+    <loc>${baseUrl}/products/weilisi-desk-ring-light</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
