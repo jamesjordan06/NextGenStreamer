@@ -1,15 +1,16 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
+  const baseUrl = (process.env.SITE_URL || 'https://nextgenstreamer.com').replace(/\/$/, '')
   const robotsTxt = `# *
 User-agent: *
 Allow: /
 
 # Host
-Host: https://nextgenstreamer.com
+Host: ${baseUrl}
 
 # Sitemaps
-Sitemap: https://nextgenstreamer.com/sitemap.xml`
+Sitemap: ${baseUrl}/sitemap.xml`
 
   return new NextResponse(robotsTxt, {
     headers: {
