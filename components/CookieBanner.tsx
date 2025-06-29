@@ -14,81 +14,84 @@ export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
   const [consentGiven, setConsentGiven] = useState<boolean | null>(null)
 
-  const GA_ID = 'G-P9TMPE87N7' // Use the actual GA ID
+  const GA_ID = 'G-P9TMPE87N7'
 
   useEffect(() => {
-    // Initialize Google Analytics immediately
     initializeGoogleAnalytics()
     
-    // Check if user has already made a choice
     const consent = localStorage.getItem('cookie-consent')
     if (consent === null) {
       setShowBanner(true)
     } else {
       setConsentGiven(consent === 'accepted')
       if (consent === 'accepted') {
-        enableAnalytics()
+        setTimeout(enableTracking, 100) // Small delay to ensure GA is ready
       }
     }
   }, [])
 
   const initializeGoogleAnalytics = () => {
-    // Initialize dataLayer
+    // Create dataLayer
     window.dataLayer = window.dataLayer || []
     
-    // Initialize gtag function
+    // Create gtag function
     function gtag(...args: any[]) {
       window.dataLayer.push(args)
     }
     window.gtag = gtag
 
-    // Load Google Analytics script
+    // Load GA script
     const script = document.createElement('script')
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
     script.async = true
     
     script.onload = () => {
-      // Initialize with timestamp
-      gtag('js', new Date())
-      
       // Configure GA
+      gtag('js', new Date())
       gtag('config', GA_ID, {
-        send_page_view: false // We'll control page views manually
+        send_page_view: false,
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true
       })
-
-      console.log('🔧 Google Analytics loaded')
-
-      // Send initial page view if consent already given
+      
+      console.log('🔧 Google Analytics script loaded')
+      
+      // If consent already given, start tracking
       const consent = localStorage.getItem('cookie-consent')
       if (consent === 'accepted') {
-        sendPageView()
+        setTimeout(enableTracking, 100)
       }
     }
     
     document.head.appendChild(script)
   }
 
-  const sendPageView = () => {
-    if (window.gtag) {
+  const enableTracking = () => {
+    if (!window.gtag) {
+      console.error('❌ gtag not available')
+      return
+    }
+
+    try {
+      // Send page view
       window.gtag('event', 'page_view', {
         page_title: document.title,
         page_location: window.location.href,
-        page_path: window.location.pathname
+        page_path: window.location.pathname,
+        send_to: GA_ID
       })
-      console.log('📊 Page view sent to GA')
-    }
-  }
 
-  const enableAnalytics = () => {
-    console.log('✅ Google Analytics tracking enabled')
-    sendPageView()
-    
-    // Send a test event
-    if (window.gtag) {
-      window.gtag('event', 'consent_granted', {
-        event_category: 'engagement',
-        custom_parameter: 'cookie_accepted'
+      // Send custom event to test tracking
+      window.gtag('event', 'user_engagement', {
+        engagement_time_msec: 1000,
+        send_to: GA_ID
       })
+
+      console.log('✅ Analytics tracking enabled and events sent')
+      console.log('📊 Page view sent for:', window.location.pathname)
+      
+    } catch (error) {
+      console.error('❌ Error sending GA events:', error)
     }
   }
 
@@ -96,7 +99,9 @@ export default function CookieBanner() {
     localStorage.setItem('cookie-consent', 'accepted')
     setConsentGiven(true)
     setShowBanner(false)
-    enableAnalytics()
+    
+    // Wait a moment for GA to be ready, then enable tracking
+    setTimeout(enableTracking, 200)
   }
 
   const handleReject = () => {

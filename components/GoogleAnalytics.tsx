@@ -18,13 +18,18 @@ export default function GoogleAnalytics() {
       // Check if user has accepted cookies
       const consent = localStorage.getItem('cookie-consent')
       if (consent === 'accepted') {
-        window.gtag('event', 'page_view', {
-          page_title: document.title,
-          page_location: window.location.href,
-          page_path: pathname
-        })
-        
-        console.log('📊 GA Page View tracked:', pathname)
+        try {
+          window.gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_path: pathname,
+            send_to: 'G-P9TMPE87N7'
+          })
+          
+          console.log('📊 Page view tracked:', pathname)
+        } catch (error) {
+          console.error('❌ Error tracking page view:', error)
+        }
       }
     }
   }, [pathname])
