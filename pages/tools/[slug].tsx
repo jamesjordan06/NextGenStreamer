@@ -1,26 +1,31 @@
-// pages/tools/[slug].tsx
-
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
-import AffiliateButton from "../../components/AffiliateButton";
 import Head from "next/head";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import AffiliateButton from "@/components/AffiliateButton";
+
+interface ToolPageProps {
+  source: MDXRemoteSerializeResult;
+  frontMatter: {
+    title: string;
+    description: string;
+  };
+}
 
 const components = {
   AffiliateButton,
 };
 
-export default function ToolPage({ source, frontMatter }) {
+export default function ToolPage({ source, frontMatter }: ToolPageProps) {
   return (
     <>
       <Head>
         <title>{frontMatter.title}</title>
         <meta name="description" content={frontMatter.description} />
       </Head>
-      <main className="prose mx-auto px-6 py-12">
+      <main className="prose mx-auto px-4 py-8">
         <h1>{frontMatter.title}</h1>
         <MDXRemote {...source} components={components} />
       </main>
@@ -29,8 +34,8 @@ export default function ToolPage({ source, frontMatter }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const files = fs.readdirSync(path.join("content"));
-
+  const dir = path.join(process.cwd(), "content/tools");
+  const files = fs.readdirSync(dir);
   const paths = files.map((filename) => ({
     params: {
       slug: filename.replace(".mdx", ""),
@@ -44,19 +49,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params.slug as string;
-  const markdownWithMeta = fs.readFileSync(
-    path.join("content", slug + ".mdx"),
-    "utf-8"
-  );
+  const slug = params?.slug as string;
+  const filePath = path.join(process.cwd(), "content/tools", `${slug}.mdx`);
+  const source = fs.readFileSync(filePath, "utf8");
 
-  const { data: frontMatter, content } = matter(markdownWithMeta);
+  const matter = await import("gray-matter");
+  const { content, data } = matter.default(source);
   const mdxSource = await serialize(content);
 
   return {
     props: {
       source: mdxSource,
-      frontMatter,
+      frontMatter: {
+        title: data.title || slug,
+        description: data.description || "",
+      },
     },
   };
 };
