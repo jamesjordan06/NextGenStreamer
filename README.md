@@ -197,7 +197,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Getting Amazon Images**: Use the Amazon Associates SiteStripe or Product Advertising API to get official image URLs
 - Ensure you comply with Amazon Associates terms of service
 - Test all affiliate links before going live
-- Consider adding Google Analytics for tracking
+- Set `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` in a `.env.local` file to enable Google Analytics tracking for page views and affiliate link clicks
 - Regular content updates improve SEO performance
 
 ## 🖼️ Getting Official Amazon Product Data
