@@ -14,11 +14,25 @@ export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
   const [consentGiven, setConsentGiven] = useState<boolean | null>(null)
 
-  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+  const GA_ID = 'G-P9TMPE87N7' // Use the actual GA ID
 
-  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+  useEffect(() => {
+    // Initialize Google Analytics immediately
+    initializeGoogleAnalytics()
+    
+    // Check if user has already made a choice
+    const consent = localStorage.getItem('cookie-consent')
+    if (consent === null) {
+      setShowBanner(true)
+    } else {
+      setConsentGiven(consent === 'accepted')
+      if (consent === 'accepted') {
+        enableAnalytics()
+      }
+    }
+  }, [])
 
-  const initializeGoogleAnalyticsWithConsentMode = () => {
+  const initializeGoogleAnalytics = () => {
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || []
     
@@ -28,143 +42,68 @@ export default function CookieBanner() {
     }
     window.gtag = gtag
 
-    // Load Google Analytics script and wait for it to load
-    if (!GA_ID) return
-
+    // Load Google Analytics script
     const script = document.createElement('script')
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
     script.async = true
     
-    // Configure GA after script loads
     script.onload = () => {
-      // Initialize Google Analytics with timestamp
+      // Initialize with timestamp
       gtag('js', new Date())
       
-      // Configure Google Analytics
+      // Configure GA
       gtag('config', GA_ID, {
-        // Enable conversion modeling
-        allow_google_signals: true,
-        allow_ad_personalization_signals: true,
-        // Send page view immediately if consent already given
-        send_page_view: false // We'll send manually after consent check
+        send_page_view: false // We'll control page views manually
       })
 
-      // Send initial page view if consent was already granted
+      console.log('🔧 Google Analytics loaded')
+
+      // Send initial page view if consent already given
       const consent = localStorage.getItem('cookie-consent')
       if (consent === 'accepted') {
-        gtag('event', 'page_view', {
-          page_title: document.title,
-          page_location: window.location.href
-        })
+        sendPageView()
       }
     }
     
     document.head.appendChild(script)
   }
 
-  const setDefaultConsentState = () => {
-    // Set default consent state (denied by default for privacy-first approach)
+  const sendPageView = () => {
     if (window.gtag) {
-      window.gtag('consent', 'default', {
-        // Analytics and measurement
-        analytics_storage: 'denied',
-        
-        // Advertising and remarketing  
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        
-        // Functionality
-        functionality_storage: 'granted',
-        security_storage: 'granted',
-        
-        // Personalization
-        personalization_storage: 'denied',
-        
-        // Wait for update before sending data (500ms)
-        wait_for_update: 500,
-        
-        // Region settings (automatically applies to EEA users)
-        region: ['AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK']
-      })
-    }
-  }
-
-  const updateConsentState = (hasConsent: boolean) => {
-    if (!window.gtag) return
-
-    if (hasConsent) {
-      // Update consent to granted
-      window.gtag('consent', 'update', {
-        analytics_storage: 'granted',
-        ad_storage: 'granted',
-        ad_user_data: 'granted',
-        ad_personalization: 'granted',
-        personalization_storage: 'granted'
-      })
-      
-      // Send page view after consent is granted
       window.gtag('event', 'page_view', {
         page_title: document.title,
-        page_location: window.location.href
+        page_location: window.location.href,
+        page_path: window.location.pathname
       })
-      
-      // Send consent granted event
-      window.gtag('event', 'consent_granted', {
-        event_category: 'engagement',
-        event_label: 'cookie_consent'
-      })
-
-      console.log('✅ Google Analytics tracking enabled')
-    } else {
-      // Update consent to denied (conversion modeling will still work)
-      window.gtag('consent', 'update', {
-        analytics_storage: 'denied',
-        ad_storage: 'denied', 
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        personalization_storage: 'denied'
-      })
-      
-      // Send consent denied event  
-      window.gtag('event', 'consent_denied', {
-        event_category: 'engagement',
-        event_label: 'cookie_consent'
-      })
-
-      console.log('❌ Google Analytics tracking disabled')
+      console.log('📊 Page view sent to GA')
     }
   }
 
-  useEffect(() => {
-    // Initialize Google Analytics with Consent Mode immediately
-    initializeGoogleAnalyticsWithConsentMode()
-
-    // Check if user has already made a choice
-    const consent = localStorage.getItem('cookie-consent')
-    if (consent === null) {
-      setShowBanner(true)
-      // Set default consent state (denied) for EEA users
-      setDefaultConsentState()
-    } else {
-      setConsentGiven(consent === 'accepted')
-      // Update consent based on stored preference
-      updateConsentState(consent === 'accepted')
+  const enableAnalytics = () => {
+    console.log('✅ Google Analytics tracking enabled')
+    sendPageView()
+    
+    // Send a test event
+    if (window.gtag) {
+      window.gtag('event', 'consent_granted', {
+        event_category: 'engagement',
+        custom_parameter: 'cookie_accepted'
+      })
     }
-  }, [])
+  }
 
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted')
     setConsentGiven(true)
     setShowBanner(false)
-    updateConsentState(true)
+    enableAnalytics()
   }
 
   const handleReject = () => {
     localStorage.setItem('cookie-consent', 'rejected')
     setConsentGiven(false)
     setShowBanner(false)
-    updateConsentState(false)
+    console.log('❌ Google Analytics tracking disabled')
   }
 
   if (!showBanner) return null
@@ -176,8 +115,7 @@ export default function CookieBanner() {
           <div className="flex-1">
             <h3 className="font-semibold mb-2">🍪 We Use Cookies & Analytics</h3>
             <p className="text-sm text-gray-300 leading-relaxed">
-              We use Google Analytics and cookies to improve your experience and measure performance. 
-              In regions where consent is required, we'll send consent signals to Google for personalized ads and conversion modeling.
+              We use Google Analytics to improve your experience and measure performance. 
               You can change your preferences anytime.{' '}
               <Link href="/legal/privacy" className="text-blue-400 hover:text-blue-300 underline">
                 Learn more in our Privacy Policy
