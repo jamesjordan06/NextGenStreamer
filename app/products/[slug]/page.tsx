@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation'
-import { Metadata } from 'next/types'
+import { Metadata } from 'next'
 import AmazonProductDetail from '@/components/AmazonProductDetail'
 import AmazonProductCard from '@/components/AmazonProductCard'
 import { getProductBySlug, getRelatedProducts, getAllProducts } from '@/lib/products'
 
-interface ProductPageProps {
-  params: {
+type ProductPageProps = {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = getProductBySlug(params.slug)
+  const { slug } = await params
+  const product = getProductBySlug(slug)
   
   if (!product) {
     return {
@@ -39,8 +40,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   }
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductBySlug(params.slug)
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = await params
+  const product = getProductBySlug(slug)
   
   if (!product) {
     notFound()
