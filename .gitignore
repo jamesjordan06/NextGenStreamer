@@ -36,5 +36,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# sitemap
-public/sitemap* 
+# sitemap files are now included for SEO 

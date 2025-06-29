@@ -1,7 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://nextgenstreamer.com/sitemap.xml
+# Host
+Host: https://nextgenstreamer.com
 
-# Updated for deployment 
+# Sitemaps
+Sitemap: https://nextgenstreamer.com/sitemap.xml

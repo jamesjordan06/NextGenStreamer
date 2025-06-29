@@ -8,9 +8,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-                              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">NG</span>
-                </div>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">NG</span>
+              </div>
               <span className="text-xl font-bold">NextGenStreamer</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -18,9 +18,9 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Product Categories */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4">Product Categories</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
@@ -42,12 +42,27 @@ export default function Footer() {
                   Lighting
                 </Link>
               </li>
+              <li>
+                <Link href="/products?category=streaming" className="text-gray-400 hover:text-white transition-colors">
+                  Streaming
+                </Link>
+              </li>
+              <li>
+                <Link href="/products?category=audio" className="text-gray-400 hover:text-white transition-colors">
+                  Audio
+                </Link>
+              </li>
+              <li>
+                <Link href="/products?category=productivity" className="text-gray-400 hover:text-white transition-colors">
+                  Productivity
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company & Resources */}
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="font-semibold mb-4">Company & Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/lists/best-microphones-2025" className="text-gray-400 hover:text-white transition-colors">
@@ -71,12 +86,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-                      <p>&copy; 2025 NextGenStreamer. All rights reserved.</p>
+          <p>&copy; 2025 NextGenStreamer. All rights reserved.</p>
         </div>
       </div>
     </footer>
