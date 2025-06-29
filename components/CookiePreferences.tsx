@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 
+const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+
 declare global {
   interface Window {
     gtag: (...args: any[]) => void
@@ -107,7 +109,7 @@ export default function CookiePreferences() {
                 <div>
                   <h5 className="font-medium text-gray-900">Analytics & Consent Mode</h5>
                   <p className="text-sm text-gray-600">Google Analytics with Consent Mode for conversion modeling and personalized ads</p>
-                  <p className="text-xs text-gray-500 mt-1">Google Analytics (G-P9TMPE87N7) + Consent Mode v2</p>
+                  <p className="text-xs text-gray-500 mt-1">Google Analytics ({GA_ID || 'G-XXXXXXX'}) + Consent Mode v2</p>
                 </div>
                 <span className={`px-2 py-1 rounded text-xs font-medium ${
                   currentConsent === 'accepted' 

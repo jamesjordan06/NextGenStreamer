@@ -31,6 +31,8 @@ export default function CookieBanner() {
     }
   }, [])
 
+  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+
   const initializeGoogleAnalyticsWithConsentMode = () => {
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || []
@@ -42,8 +44,10 @@ export default function CookieBanner() {
     window.gtag = gtag
 
     // Load Google Analytics script and wait for it to load
+    if (!GA_ID) return
+
     const script = document.createElement('script')
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-P9TMPE87N7'
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
     script.async = true
     
     // Configure GA after script loads
@@ -52,7 +56,7 @@ export default function CookieBanner() {
       gtag('js', new Date())
       
       // Configure Google Analytics
-      gtag('config', 'G-P9TMPE87N7', {
+      gtag('config', GA_ID, {
         // Enable conversion modeling
         allow_google_signals: true,
         allow_ad_personalization_signals: true,
