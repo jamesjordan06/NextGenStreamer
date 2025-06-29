@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nextgenstreamer.com/sitemap.xml
+
+# Updated for deployment 

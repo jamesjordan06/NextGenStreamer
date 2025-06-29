@@ -116,7 +116,7 @@ export default function AmazonProductDetail({ product }: AmazonProductDetailProp
 
           {/* CTA Button */}
           <div className="space-y-3">
-            <AmazonCTAButton url={product.amazonUrl} size="lg" />
+            <AmazonCTAButton url={product.amazonUrl} size="lg" productName={product.name} />
             <p className="text-xs text-gray-500">
               * Price and availability subject to change. Check Amazon for current pricing.
             </p>

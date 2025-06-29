@@ -69,7 +69,7 @@ export default function AmazonProductCard({ product }: AmazonProductCardProps) {
 
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-3">
-          <AmazonCTAButton url={product.amazonUrl} size="sm" />
+          <AmazonCTAButton url={product.amazonUrl} size="sm" productName={product.name} />
           <Link 
             href={`/products/${product.slug}`}
             className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-200"
