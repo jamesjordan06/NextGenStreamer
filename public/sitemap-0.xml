@@ -1,21 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://nextgenstreamer.com/legal/disclaimer</loc><lastmod>2025-06-29T22:13:03.616Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/audio-technica-at2020</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/blue-yeti-blackout</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/elgato-stream-deck</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/fifine-gaming-mixer</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/innogear-boom-arm</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/led-light-panel</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/logitech-brio</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/logitech-mx-master-3s-mouse</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/logitech-webcam</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/shure-sm7b</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/sony-wh-ch520-headphones</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/products/weilisi-desk-ring-light</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
-<url><loc>https://nextgenstreamer.com/about</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/legal/privacy</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://nextgenstreamer.com/lists/best-microphones-2025</loc><lastmod>2025-06-29T22:13:03.617Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <url>
+    <loc>https://nextgenstreamer.com</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/about</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/lists/best-microphones-2025</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/legal/privacy</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/legal/disclaimer</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/audio-technica-at2020</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/blue-yeti-blackout</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/elgato-stream-deck</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/fifine-gaming-mixer</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/innogear-boom-arm</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/led-light-panel</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/logitech-brio</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/logitech-mx-master-3s-mouse</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/logitech-webcam</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/shure-sm7b</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/sony-wh-ch520-headphones</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nextgenstreamer.com/products/weilisi-desk-ring-light</loc>
+    <lastmod>2025-06-29T23:31:20.163Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
