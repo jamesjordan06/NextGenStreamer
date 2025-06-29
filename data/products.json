@@ -1,0 +1,314 @@
+[
+  {
+    "asin": "B00N1YPXW2",
+    "slug": "blue-yeti-blackout",
+    "name": "Blue Yeti USB Mic for Recording and Streaming on PC and Mac with Blue VOCE Effects, 4 Pickup Patterns, Headphone Output and Volume Control, Mic Gain Control, Adjustable Stand, Plug & Play – Blackout",
+    "description": "Professional USB microphone perfect for podcasting, streaming, gaming, and content creation. Features studio-quality sound with four pickup patterns and real-time effects.",
+    "amazonUrl": "https://amzn.to/4khMMLd",
+    "imageUrl": "https://m.media-amazon.com/images/I/511gDZ6d35L._AC_SX679_.jpg",
+    "features": [
+      "Four pickup patterns (cardioid, bidirectional, omnidirectional, stereo)",
+      "Blue VO!CE real-time voice effects",
+      "Zero-latency headphone monitoring",
+      "Mic gain control and mute button",
+      "Plug & play USB connectivity",
+      "Adjustable desktop stand included"
+    ],
+    "pros": [
+      "Exceptional audio quality for the price",
+      "Easy plug-and-play setup",
+      "Multiple pickup patterns for versatility", 
+      "Built-in headphone monitoring",
+      "Amazon's Choice product with 4.6/5 stars (34,643 reviews)"
+    ],
+    "cons": [
+      "Large size takes up significant desk space",
+      "Can be sensitive to background noise",
+      "No built-in shock mount",
+      "Heavy weight (1.2 lbs)"
+    ],
+    "categories": ["Microphones"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B085TFF7M1",
+    "slug": "logitech-webcam",
+    "name": "Logitech HD Pro Webcam",
+    "description": "Full HD webcam with built-in privacy features.",
+    "amazonUrl": "https://amzn.to/4nrpS6M",
+    "imageUrl": "https://m.media-amazon.com/images/I/71YN85pLGcL._AC_SX679_.jpg",
+    "features": ["1080p resolution", "Privacy shutter", "Dual mics"],
+    "pros": ["Clear video quality", "Compatible with all OS", "Great for Zoom"],
+    "cons": ["May need good lighting", "Fixed focus"],
+    "categories": ["Webcams"],
+    "priceNote": "Check price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B083SLZ6JT",
+    "slug": "led-light-panel",
+    "name": "LED Light Panel for Streaming",
+    "description": "Adjustable LED panel light ideal for content creation.",
+    "amazonUrl": "https://amzn.to/46iSrgy",
+    "imageUrl": "https://m.media-amazon.com/images/I/713O9-KvWLL._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg",
+    "features": ["Adjustable brightness", "Color temperature control", "Compact design"],
+    "pros": ["Professional lighting", "Easy to set up", "Good value"],
+    "cons": ["Needs power outlet", "Basic controls"],
+    "categories": ["Lighting"],
+    "priceNote": "Check price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0B823S1NR",
+    "slug": "audio-technica-at2020",
+    "name": "Audio-Technica AT2020",
+    "description": "A studio-quality condenser microphone used by professionals.",
+    "amazonUrl": "https://amzn.to/46kJjYR",
+    "imageUrl": "https://m.media-amazon.com/images/I/81NcJuOEyIL._AC_SX679_.jpg",
+    "features": ["Cardioid condenser", "XLR connection", "Studio-grade build"],
+    "pros": ["Excellent vocal clarity", "Industry trusted"],
+    "cons": ["Requires interface", "No mute button"],
+    "categories": ["Microphones"],
+    "priceNote": "Check price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B01N5UOYC4",
+    "slug": "logitech-brio",
+    "name": "Logitech Brio 4K Webcam",
+    "description": "Ultra HD 4K webcam for professional live streaming and video calls.",
+    "amazonUrl": "https://amzn.to/46iSAAC",
+    "imageUrl": "https://m.media-amazon.com/images/I/71SAamTGWQL._AC_SX679_.jpg",
+    "features": ["4K Ultra HD", "HDR", "Adjustable field of view"],
+    "pros": ["Crisp 4K video", "High dynamic range"],
+    "cons": ["Expensive", "Needs strong lighting"],
+    "categories": ["Webcams"],
+    "priceNote": "Check price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0002E4Z8M",
+    "slug": "shure-sm7b",
+    "name": "Shure SM7B Microphone - Vocal Dynamic Studio Mic for Broadcast, Podcast, Recording, Gaming & Streaming, XLR, Rugged Construction, Detachable Windscreen, Smooth Sound, Warm Vocals, Wide-Range Frequency",
+    "description": "Industry-standard professional dynamic microphone trusted by top podcasters, broadcasters, and recording artists worldwide for exceptional vocal clarity.",
+    "amazonUrl": "https://amzn.to/4lc2jxw",
+    "imageUrl": "https://m.media-amazon.com/images/I/71LYHO3+wnL._AC_SX679_.jpg",
+    "features": [
+      "XLR professional connection",
+      "Dynamic cardioid pattern for vocal isolation",
+      "Built-in electromagnetic shielding",
+      "Air suspension shock isolation",
+      "Detachable windscreen included",
+      "Bass rolloff and presence boost controls"
+    ],
+    "pros": [
+      "Industry gold standard for podcasting",
+      "Exceptional background noise rejection",
+      "Works great for close-miking vocals",
+      "Trusted by professionals worldwide",
+      "4.8/5 stars with 11,564+ reviews"
+    ],
+    "cons": [
+      "Requires audio interface or preamp",
+      "Expensive investment",
+      "Needs proper gain staging",
+      "Heavy and bulky design"
+    ],
+    "categories": ["Microphones"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B09738CV2G",
+    "slug": "elgato-stream-deck",
+    "name": "Elgato Stream Deck MK.2 – Studio Controller, 15 macro keys, trigger actions in apps and software like OBS, Twitch, YouTube and more, works with Mac and PC",
+    "description": "Essential content creator tool with 15 customizable LCD keys for streamlining your streaming, recording, and content creation workflow.",
+    "amazonUrl": "https://amzn.to/3GkXHps",
+    "imageUrl": "https://m.media-amazon.com/images/I/51jSapFsaWL._AC_SX679_.jpg",
+    "features": [
+      "15 customizable LCD keys",
+      "Trigger actions in OBS, Twitch, YouTube",
+      "Drag & drop software configuration",
+      "Works with Mac and PC",
+      "Stream and scene switching",
+      "Social media integration"
+    ],
+    "pros": [
+      "Streamlines content creation workflow",
+      "Highly customizable interface",
+      "Easy drag-and-drop setup",
+      "Wide software compatibility",
+      "4.8/5 stars with 10,608+ reviews"
+    ],
+    "cons": [
+      "Learning curve for new users",
+      "Premium price point",
+      "Limited to 15 keys",
+      "Requires software setup"
+    ],
+    "categories": ["Streaming"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0CH9KZXWR",
+    "slug": "weilisi-desk-ring-light",
+    "name": "Weilisi 10.2\" Desk Ring Light with Stand for Zoom Meetings, Ring Light for Desk with Clamp, 360° Rotate & Flexible Height Video Conference Light, Adjust Arm Desk Lamp Zoom Light for Home Office",
+    "description": "Versatile desk-mounted ring light perfect for video calls, content creation, and workspace lighting with professional-grade features.",
+    "amazonUrl": "https://amzn.to/448a1Cz",
+    "imageUrl": "https://m.media-amazon.com/images/I/71U2cSuvuuL._AC_SX679_.jpg",
+    "features": [
+      "10.2-inch full-screen LED ring",
+      "Strong metal C-clamp design",
+      "360° rotation and flexible height",
+      "10 brightness levels and 3 color temperatures",
+      "USB powered with 5V/3A adapter",
+      "Adjustable arm for perfect positioning"
+    ],
+    "pros": [
+      "Perfect for video conferencing",
+      "Stable clamp design",
+      "Multiple brightness and color options",
+      "Space-saving desk mounting",
+      "4.5/5 stars with 498+ reviews"
+    ],
+    "cons": [
+      "Requires power source",
+      "May not fit thick desks",
+      "Fixed arm length",
+      "Basic remote control"
+    ],
+    "categories": ["Lighting"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B01L3LL95O",
+    "slug": "innogear-boom-arm",
+    "name": "InnoGear Boom Arm Microphone Stand for Blue Yeti and Other Microphones, Adjustable Suspension Boom Scissor Arm Stand with Cable Management",
+    "description": "Professional adjustable boom arm stand designed for USB microphones like Blue Yeti, with superior cable management and sturdy construction.",
+    "amazonUrl": "https://amzn.to/44FWPVJ",
+    "imageUrl": "https://m.media-amazon.com/images/I/710XD4Vy1oL._AC_SX679_.jpg",
+    "features": [
+      "Adjustable scissor boom arm design",
+      "Compatible with Blue Yeti and most USB mics",
+      "Integrated cable management system",
+      "Heavy-duty desk clamp",
+      "360-degree positioning",
+      "Load capacity up to 3.3 lbs"
+    ],
+    "pros": [
+      "Frees up desk space",
+      "Reduces handling noise",
+      "Easy height and angle adjustment",
+      "Clean cable management",
+      "Strong and stable construction"
+    ],
+    "cons": [
+      "Clamp may not fit all desks",
+      "Requires assembly",
+      "May sag with heavier microphones",
+      "Limited reach extension"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0BZP95YB5",
+    "slug": "fifine-gaming-mixer",
+    "name": "FIFINE Gaming Audio Mixer, Streaming RGB PC Mixer with Slider Fader, XLR Microphone Interface, Individual Voice/Game Control for Video/Podcast Recording-AmpliGame SC3",
+    "description": "Professional gaming audio mixer with RGB lighting, perfect for streamers and content creators who need individual control over game and voice audio.",
+    "amazonUrl": "https://amzn.to/40iQcq3",
+    "imageUrl": "https://m.media-amazon.com/images/I/71GiojmKOxL._AC_SX679_.jpg",
+    "features": [
+      "Individual voice and game volume control",
+      "XLR microphone input with phantom power",
+      "RGB lighting effects",
+      "Real-time voice monitoring",
+      "Multiple output options",
+      "Slider faders for precise control"
+    ],
+    "pros": [
+      "Separate game and voice audio control",
+      "Professional XLR microphone support",
+      "RGB lighting for gaming setups",
+      "Real-time audio monitoring",
+      "Easy-to-use interface"
+    ],
+    "cons": [
+      "Learning curve for beginners",
+      "Additional cables required",
+      "RGB might be distracting",
+      "Requires proper audio setup knowledge"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0BVQ1GL18",
+    "slug": "sony-wh-ch520-headphones",
+    "name": "Sony WH‑CH520 Wireless Headphones",
+    "description": "Lightweight on-ear wireless headphones with exceptional 50-hour battery life, perfect for daily use, commuting, and casual listening.",
+    "amazonUrl": "https://www.amazon.com/dp/B0BVQ1GL18?tag=newaffilia0b5-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/51sRM0oCmWL._AC_SX679_.jpg",
+    "features": [
+      "Up to 50 hours battery life",
+      "Bluetooth 5.2 with multipoint pairing",
+      "Sony Headphones Connect app support",
+      "360 Reality Audio compatible",
+      "Quick charge: 3 min = 1.5 hours playback",
+      "DSEE (Digital Sound Enhancement Engine)"
+    ],
+    "pros": [
+      "Outstanding 50-hour battery life",
+      "Comfortable lightweight design",
+      "App customization with EQ presets",
+      "Fast pairing and multipoint connectivity",
+      "Excellent value for money"
+    ],
+    "cons": [
+      "On-ear design may not suit everyone",
+      "Limited noise isolation",
+      "Basic build materials",
+      "No active noise cancellation"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B09HM94VDS",
+    "slug": "logitech-mx-master-3s-mouse",
+    "name": "Logitech MX Master 3S Wireless Mouse",
+    "description": "Premium productivity mouse with 8,000 DPI precision, silent clicks, and electromagnetic scroll wheel - perfect for creative professionals and power users.",
+    "amazonUrl": "https://www.amazon.com/dp/B09HM94VDS?tag=newaffilia0b5-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/61+OT7FPABL._AC_SX679_.jpg",
+    "features": [
+      "8,000 DPI Darkfield sensor",
+      "Silent clicking (90% quieter)",
+      "Electromagnetic precision scroll wheel",
+      "Multi-device connectivity (3 devices)",
+      "70-day battery life",
+      "Customizable with Logi Options+ software"
+    ],
+    "pros": [
+      "Premium ergonomic design",
+      "Excellent precision and customization",
+      "Silent operation for quiet environments",
+      "Outstanding battery life",
+      "Multi-device seamless switching"
+    ],
+    "cons": [
+      "Right-handed design only",
+      "Premium price point",
+      "May be too large for small hands",
+      "No wireless charging"
+    ],
+    "categories": ["Productivity"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  }
+] 
