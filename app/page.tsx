@@ -77,7 +77,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Microphones */}
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -132,6 +132,63 @@ export default function Home() {
                 className="text-yellow-600 hover:text-yellow-700 font-medium"
               >
                 Browse Lighting →
+              </Link>
+            </div>
+
+            {/* Streaming */}
+            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Streaming</h3>
+              <p className="text-gray-600 mb-6">
+                Stream decks and controllers for seamless live streaming.
+              </p>
+              <Link 
+                href="/products?category=streaming"
+                className="text-green-600 hover:text-green-700 font-medium"
+              >
+                Browse Streaming →
+              </Link>
+            </div>
+
+            {/* Audio */}
+            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Audio</h3>
+              <p className="text-gray-600 mb-6">
+                Headphones, boom arms, and audio mixing equipment.
+              </p>
+              <Link 
+                href="/products?category=audio"
+                className="text-red-600 hover:text-red-700 font-medium"
+              >
+                Browse Audio →
+              </Link>
+            </div>
+
+            {/* Productivity */}
+            <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Productivity</h3>
+              <p className="text-gray-600 mb-6">
+                Mice, keyboards, and tools to enhance your workflow.
+              </p>
+              <Link 
+                href="/products?category=productivity"
+                className="text-indigo-600 hover:text-indigo-700 font-medium"
+              >
+                Browse Productivity →
               </Link>
             </div>
           </div>
