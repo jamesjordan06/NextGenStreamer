@@ -41,50 +41,69 @@ export default function CookieBanner() {
     }
     window.gtag = gtag
 
-    // Load Google Analytics script
+    // Load Google Analytics script and wait for it to load
     const script = document.createElement('script')
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-P9TMPE87N7'
     script.async = true
-    document.head.appendChild(script)
-
-    // Initialize Google Analytics with timestamp
-    gtag('js', new Date())
     
-    // Configure Google Analytics
-    gtag('config', 'G-P9TMPE87N7', {
-      // Enable conversion modeling
-      allow_google_signals: true,
-      allow_ad_personalization_signals: true
-    })
+    // Configure GA after script loads
+    script.onload = () => {
+      // Initialize Google Analytics with timestamp
+      gtag('js', new Date())
+      
+      // Configure Google Analytics
+      gtag('config', 'G-P9TMPE87N7', {
+        // Enable conversion modeling
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+        // Send page view immediately if consent already given
+        send_page_view: false // We'll send manually after consent check
+      })
+
+      // Send initial page view if consent was already granted
+      const consent = localStorage.getItem('cookie-consent')
+      if (consent === 'accepted') {
+        gtag('event', 'page_view', {
+          page_title: document.title,
+          page_location: window.location.href
+        })
+      }
+    }
+    
+    document.head.appendChild(script)
   }
 
   const setDefaultConsentState = () => {
     // Set default consent state (denied by default for privacy-first approach)
-    window.gtag('consent', 'default', {
-      // Analytics and measurement
-      analytics_storage: 'denied',
-      
-      // Advertising and remarketing  
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      
-      // Functionality
-      functionality_storage: 'granted',
-      security_storage: 'granted',
-      
-      // Personalization
-      personalization_storage: 'denied',
-      
-      // Wait for update before sending data (500ms)
-      wait_for_update: 500,
-      
-      // Region settings (automatically applies to EEA users)
-      region: ['AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK']
-    })
+    if (window.gtag) {
+      window.gtag('consent', 'default', {
+        // Analytics and measurement
+        analytics_storage: 'denied',
+        
+        // Advertising and remarketing  
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        
+        // Functionality
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        
+        // Personalization
+        personalization_storage: 'denied',
+        
+        // Wait for update before sending data (500ms)
+        wait_for_update: 500,
+        
+        // Region settings (automatically applies to EEA users)
+        region: ['AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK']
+      })
+    }
   }
 
   const updateConsentState = (hasConsent: boolean) => {
+    if (!window.gtag) return
+
     if (hasConsent) {
       // Update consent to granted
       window.gtag('consent', 'update', {
@@ -95,11 +114,19 @@ export default function CookieBanner() {
         personalization_storage: 'granted'
       })
       
+      // Send page view after consent is granted
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href
+      })
+      
       // Send consent granted event
       window.gtag('event', 'consent_granted', {
         event_category: 'engagement',
         event_label: 'cookie_consent'
       })
+
+      console.log('✅ Google Analytics tracking enabled')
     } else {
       // Update consent to denied (conversion modeling will still work)
       window.gtag('consent', 'update', {
@@ -115,6 +142,8 @@ export default function CookieBanner() {
         event_category: 'engagement',
         event_label: 'cookie_consent'
       })
+
+      console.log('❌ Google Analytics tracking disabled')
     }
   }
 

@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import AffiliateDisclaimer from '@/components/AffiliateDisclaimer'
 import CookieBanner from '@/components/CookieBanner'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,6 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <GoogleAnalytics />
         <Navigation />
         <main className="min-h-screen">
           {children}
