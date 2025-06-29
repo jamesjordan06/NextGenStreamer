@@ -14,6 +14,8 @@ declare global {
   }
 }
 
+const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+
 export default function AmazonCTAButton({ 
   url, 
   text = "Check it on Amazon →", 
@@ -36,7 +38,7 @@ export default function AmazonCTAButton({
 
   const handleClick = () => {
     // Track affiliate link clicks with Google Analytics
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' && window.gtag && GA_ID) {
       // Track affiliate link click
       window.gtag('event', 'affiliate_click', {
         event_category: 'affiliate_link',
