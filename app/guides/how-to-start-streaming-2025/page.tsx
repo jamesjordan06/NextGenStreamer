@@ -492,7 +492,7 @@ export default function HowToStartStreamingPage() {
                 <ul className="text-red-700 space-y-3">
                   <li>• <strong>Follow-for-follow schemes</strong> (these followers never engage)</li>
                   <li>• <strong>Copying exactly what big streamers do</strong> (you need your own identity)</li>
-                  <li>• <strong>Streaming 8+ hours hoping to get lucky</strong> (quality > quantity)</li>
+                  <li>• <strong>Streaming 8+ hours hoping to get lucky</strong> (quality &gt; quantity)</li>
                   <li>• <strong>Only promoting yourself</strong> (support others and they'll support you)</li>
                   <li>• <strong>Switching games/content constantly</strong> (people follow for consistency)</li>
                 </ul>
