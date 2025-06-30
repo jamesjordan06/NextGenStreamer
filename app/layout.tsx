@@ -58,17 +58,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script id="load-adsense" strategy="afterInteractive">
-          {`
-            if (typeof window !== 'undefined' && localStorage.getItem('cookie-consent') === 'accepted') {
-              const s = document.createElement('script');
-              s.async = true;
-              s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042';
-              s.crossOrigin = 'anonymous';
-              document.head.appendChild(s);
-            }
-          `}
-        </Script>
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042"
+          strategy="afterInteractive"
+          async
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
