@@ -115,6 +115,11 @@ export default function Footer() {
                   Disclaimer
                 </Link>
               </li>
+              <li>
+                <Link href="/legal/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

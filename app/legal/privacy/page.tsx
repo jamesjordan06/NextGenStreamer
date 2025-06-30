@@ -1,5 +1,6 @@
-import { Metadata } from 'next/types'
-import CookiePreferences from '@/components/CookiePreferences'
+import { Metadata } from 'next/types';
+import CookiePreferences from '@/components/CookiePreferences';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - NextGenStreamer',
@@ -89,10 +90,14 @@ export default function PrivacyPage() {
                 the new privacy policy on this page and updating the "Last updated" date.
               </p>
               
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Advertising</h2>
+              <p className="text-gray-600 mb-6">
+                Our website may display advertisements from third-party advertising networks, such as Google AdSense. These companies may use cookies and similar tracking technologies to collect information about your visits to this and other websites in order to provide relevant advertisements about goods and services of interest to you. You can learn more about Google's practices and opt-out by visiting the Google Ads Settings page. Our use of such services will always be in line with our commitment to user privacy and consent mechanisms where applicable.
+              </p>
+
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
               <p className="text-gray-600">
-                If you have any questions about this privacy policy, please contact us through our website or 
-                social media channels.
+                If you have any questions about this privacy policy, please email us at <a href="mailto:contact@nextgenstreamer.com" className="text-blue-600 hover:underline">contact@nextgenstreamer.com</a>. You may also reach out via our future <Link href="/legal/contact" className="text-blue-600 hover:underline">Contact Page</Link>.
               </p>
             </div>
           </div>
