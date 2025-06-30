@@ -479,7 +479,7 @@ export default function HowToStartStreamingPage() {
               <div className="bg-green-50 p-6 rounded-lg">
                 <h3 className="font-bold text-green-800 mb-4">🚀 What Actually Works</h3>
                 <ul className="text-green-700 space-y-3">
-                  <li>• <strong>Consistency over perfection</strong> (3 mediocre streams > 1 perfect stream)</li>
+                  <li>• <strong>Consistency over perfection</strong> (3 mediocre streams &gt; 1 perfect stream)</li>
                   <li>• <strong>Engage with other streamers</strong> (genuinely, not just self-promo)</li>
                   <li>• <strong>Have a regular schedule</strong> (even 2x/week is fine)</li>
                   <li>• <strong>Create outside content</strong> (YouTube shorts, TikTok, Twitter)</li>
