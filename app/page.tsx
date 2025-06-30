@@ -26,10 +26,10 @@ export default function Home() {
                 Browse All Gear
               </Link>
               <Link 
-                href="/lists/best-microphones-2025"
+                href="/products"
                 className="btn-secondary text-lg px-8 py-4"
               >
-                See Best Lists
+                Browse All Products
               </Link>
             </div>
           </div>

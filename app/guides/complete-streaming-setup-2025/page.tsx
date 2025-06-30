@@ -636,10 +636,10 @@ export default function CompleteStreamingSetupGuidePage() {
               Shop All Equipment
             </Link>
             <Link 
-              href="/lists/best-microphones-2025" 
+              href="/products?category=microphones" 
               className="inline-block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
             >
-              More Buying Guides
+              Browse Microphones
             </Link>
           </div>
         </div>

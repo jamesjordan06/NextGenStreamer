@@ -1,4 +1,4 @@
-import { Metadata } from 'next/types'
+import { Metadata } from 'next'
 import AmazonProductCard from '@/components/AmazonProductCard'
 import { getProductsByCategory } from '@/lib/products'
 

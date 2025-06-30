@@ -47,7 +47,21 @@ module.exports = {
     })
     
     result.push({
-      loc: '/lists/best-microphones-2025',
+      loc: '/guides/complete-streaming-setup-2025',
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
+    })
+    
+    result.push({
+      loc: '/guides/xlr-vs-usb-microphones-2025',
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
+    })
+    
+    result.push({
+      loc: '/guides/headphones-vs-earbuds-2025',
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date().toISOString(),

@@ -338,10 +338,10 @@ export default function XLRvsUSBMicrophonesPage() {
               Shop Microphones
             </Link>
             <Link 
-              href="/lists/best-microphones-2025" 
+              href="/products?category=microphones" 
               className="inline-block border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              See Top Microphones
+              Shop All Microphones
             </Link>
           </div>
         </div>
