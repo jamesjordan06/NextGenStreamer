@@ -1,4 +1,5 @@
-import { Metadata } from 'next/types'
+import { Metadata } from 'next/types';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclaimer - NextGenStreamer',
@@ -28,9 +29,7 @@ export default function DisclaimerPage() {
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Affiliate Relationships</h2>
               <p className="text-gray-600 mb-6">
-                This website contains affiliate links, which means we may receive a small commission if you make 
-                a purchase through these links at no additional cost to you. This commission helps support our 
-                website and allows us to continue providing valuable content and recommendations.
+                This website contains affiliate links. This means if you click on a link and make a purchase, or sign up for a service (such as Streamlabs via links on our site), we may receive a small commission at no additional cost to you. This commission helps support our website and allows us to continue providing valuable content and recommendations. We are a participant in the Amazon Services LLC Associates Program and may participate in other similar affiliate programs.
               </p>
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Product Recommendations</h2>
@@ -70,8 +69,7 @@ export default function DisclaimerPage() {
               
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
               <p className="text-gray-600">
-                If you have any questions about our affiliate relationships or this disclaimer, please contact 
-                us through our website or social media channels. We are committed to transparency and will be 
+                If you have any questions about our affiliate relationships or this disclaimer, please email us at <a href="mailto:contact@nextgenstreamer.com" className="text-blue-600 hover:underline">contact@nextgenstreamer.com</a>. You may also reach out via our future <Link href="/legal/contact" className="text-blue-600 hover:underline">Contact Page</Link>. We are committed to transparency and will be
                 happy to answer any questions you may have.
               </p>
             </div>
