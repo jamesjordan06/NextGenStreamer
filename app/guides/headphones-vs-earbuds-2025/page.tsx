@@ -7,7 +7,10 @@ import { getProductByAsin } from '../../../lib/products'
 export const metadata: Metadata = {
   title: 'Headphones vs Earbuds for Gaming & Streaming 2025 | NextGenStreamer',
   description: 'Complete comparison of headphones vs earbuds for gaming, streaming, and content creation. Discover which is better for your needs with detailed pros, cons, and product recommendations.',
-  keywords: 'headphones vs earbuds gaming, best headphones for streaming, gaming headphones comparison, wireless earbuds gaming, content creator headphones 2025'
+  keywords: 'headphones vs earbuds gaming, best headphones for streaming, gaming headphones comparison, wireless earbuds gaming, content creator headphones 2025',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/guides/headphones-vs-earbuds-2025'
+  }
 }
 
 export default function HeadphonesVsEarbudsPage() {

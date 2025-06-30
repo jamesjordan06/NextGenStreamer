@@ -3,6 +3,9 @@ import { Metadata } from 'next/types'
 export const metadata: Metadata = {
   title: 'Affiliate Disclaimer - NextGenStreamer',
   description: 'Our affiliate disclaimer explains our relationship with Amazon and other retailers mentioned on our site.',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/legal/disclaimer'
+  }
 }
 
 export default function DisclaimerPage() {

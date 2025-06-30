@@ -2,6 +2,13 @@ import Link from 'next/link'
 import AmazonProductCard from '@/components/AmazonProductCard'
 import AmazonCTAButton from '@/components/AmazonCTAButton'
 import { getFeaturedProducts } from '@/lib/products'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/'
+  }
+}
 
 export default function Home() {
   const featuredProducts = getFeaturedProducts()

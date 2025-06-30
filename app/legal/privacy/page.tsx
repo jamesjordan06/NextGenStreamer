@@ -4,6 +4,9 @@ import CookiePreferences from '@/components/CookiePreferences'
 export const metadata: Metadata = {
   title: 'Privacy Policy - NextGenStreamer',
   description: 'Our privacy policy explains how we collect, use, and protect your information when you visit NextGenStreamer.',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/legal/privacy'
+  }
 }
 
 export default function PrivacyPage() {

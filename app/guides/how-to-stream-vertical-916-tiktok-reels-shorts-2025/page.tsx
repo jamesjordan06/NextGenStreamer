@@ -7,6 +7,9 @@ export const metadata = {
   title: 'How to Stream Vertical (9:16) for TikTok, Reels & YouTube Shorts 2025 - NextGenStreamer',
   description: 'Master vertical streaming for TikTok, Instagram Reels, and YouTube Shorts. Complete setup guide with OBS configuration, equipment tips, and content strategies that actually work.',
   keywords: 'vertical streaming, 9:16 streaming, TikTok live streaming, Instagram Reels live, YouTube Shorts streaming, OBS vertical setup, portrait streaming',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025'
+  }
 }
 
 export default function VerticalStreamingGuide() {

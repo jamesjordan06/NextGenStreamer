@@ -11,6 +11,7 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextgenstreamer.com'),
   title: {
     default: 'NextGenStreamer - Best Creator Gear & Equipment 2025',
     template: '%s | NextGenStreamer'

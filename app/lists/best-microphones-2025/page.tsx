@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Discover the best microphones for podcasting, streaming, and content creation in 2025.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/lists/best-microphones-2025'
+  }
 }
 
 export default function BestMicrophonesPage() {
