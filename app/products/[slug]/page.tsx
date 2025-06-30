@@ -37,6 +37,9 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       images: [product.imageUrl],
       type: 'article',
     },
+    alternates: {
+      canonical: `https://nextgenstreamer.com/products/${slug}`
+    }
   }
 }
 

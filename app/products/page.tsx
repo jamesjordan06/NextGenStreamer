@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Browse our complete collection of microphones, webcams, lighting, and streaming equipment for content creators.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/products'
+  }
 }
 
 export default function ProductsPage() {

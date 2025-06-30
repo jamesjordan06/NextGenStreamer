@@ -3,6 +3,9 @@ import { Metadata } from 'next/types'
 export const metadata: Metadata = {
   title: 'About NextGenStreamer - Your Creator Gear Experts',
   description: 'Learn about NextGenStreamer and our mission to help content creators find the best equipment for their journey.',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/about'
+  }
 }
 
 export default function AboutPage() {

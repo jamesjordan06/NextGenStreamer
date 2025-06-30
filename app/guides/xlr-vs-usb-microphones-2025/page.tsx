@@ -7,7 +7,10 @@ import { getProductByAsin } from '../../../lib/products'
 export const metadata: Metadata = {
   title: 'XLR vs USB Microphones: Complete Guide 2025 | NextGenStreamer',
   description: 'Comprehensive comparison of XLR and USB microphones for streaming, podcasting, and content creation. Learn which type is right for your setup with detailed pros, cons, and product recommendations.',
-  keywords: 'XLR vs USB microphones, best microphones for streaming, professional microphones, USB microphone comparison, XLR microphone setup, content creator microphones 2025'
+  keywords: 'XLR vs USB microphones, best microphones for streaming, professional microphones, USB microphone comparison, XLR microphone setup, content creator microphones 2025',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/guides/xlr-vs-usb-microphones-2025'
+  }
 }
 
 export default function XLRvsUSBMicrophonesPage() {

@@ -7,6 +7,9 @@ export const metadata = {
   title: 'How to Monetize Your Stream in 2025 (Even with Low Viewers) - NextGenStreamer',
   description: 'Discover proven strategies to start earning money from streaming, even with a small audience. Learn affiliate marketing, sponsorships, donations, and alternative revenue streams.',
   keywords: 'stream monetization, twitch monetization, youtube monetization, small streamer income, streaming revenue, affiliate marketing for streamers',
+  alternates: {
+    canonical: 'https://nextgenstreamer.com/guides/how-to-monetize-streaming-low-viewers-2025'
+  }
 }
 
 export default function MonetizeStreamingGuide() {
