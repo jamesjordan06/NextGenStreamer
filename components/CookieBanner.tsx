@@ -39,7 +39,7 @@ export default function CookieBanner() {
 
   return (
     <>
-      {/* Google Analytics - Only loads after consent */}
+      {/* Google Analytics - Only load after consent */}
       {loadGA && (
         <>
           <Script
