@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import AffiliateDisclaimer from '@/components/AffiliateDisclaimer'
 import CookieBanner from '@/components/CookieBanner'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -56,6 +57,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script id="load-adsense" strategy="afterInteractive">
+          {`
+            if (typeof window !== 'undefined' && localStorage.getItem('cookie-consent') === 'accepted') {
+              const s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042';
+              s.crossOrigin = 'anonymous';
+              document.head.appendChild(s);
+            }
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <GoogleAnalytics />
         <Navigation />
