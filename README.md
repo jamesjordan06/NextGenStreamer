@@ -200,6 +200,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Set `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` in a `.env.local` file to enable Google Analytics tracking for page views and affiliate link clicks
 - Regular content updates improve SEO performance
 
+## Google AdSense Verification
+
+1. Update `public/ads.txt` with your AdSense publisher ID.
+2. Deploy the site and confirm `https://yourdomain.com/ads.txt` loads in the browser.
+3. Retry site verification in the AdSense dashboard once the file is reachable.
+
 ## 🖼️ Getting Official Amazon Product Data
 
 **✅ RECOMMENDED: Use Amazon SiteStripe** (see `SITESTRIPE_GUIDE.md`)
