@@ -195,6 +195,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Streaming Guide CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <div className="text-6xl mb-6">🚀</div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              New to Streaming? Start Here!
+            </h2>
+            <p className="text-xl mb-8 opacity-90 leading-relaxed">
+              Our comprehensive 2025 guide covers everything you need to build a professional streaming setup from scratch. 
+              Step-by-step instructions, equipment recommendations, and pro tips included.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/guides/complete-streaming-setup-2025"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition-colors"
+              >
+                Read the Complete Guide
+              </Link>
+              <Link 
+                href="/products"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full font-bold text-lg transition-colors"
+              >
+                Shop Equipment Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container">

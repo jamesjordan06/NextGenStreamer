@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Navigation() {
@@ -11,11 +12,15 @@ export default function Navigation() {
       <div className="container">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">NG</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">NextGenStreamer</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/nextgenstreamer-logo-cropped.png"
+              alt="NextGenStreamer Logo"
+              height={50}
+              width={200}
+              className="h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -54,9 +59,25 @@ export default function Navigation() {
                 </Link>
               </div>
             </div>
-            <Link href="/lists/best-microphones-2025" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Best Lists
-            </Link>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                Guides
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                <Link href="/guides/complete-streaming-setup-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Complete Streaming Setup 2025
+                </Link>
+                <Link href="/guides/xlr-vs-usb-microphones-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  XLR vs USB Microphones 2025
+                </Link>
+                <Link href="/guides/headphones-vs-earbuds-2025" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Headphones vs Earbuds 2025
+                </Link>
+              </div>
+            </div>
             <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               About
             </Link>
@@ -104,8 +125,15 @@ export default function Navigation() {
             <Link href="/products?category=productivity" className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
               Productivity
             </Link>
-            <Link href="/lists/best-microphones-2025" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">
-              Best Lists
+            <div className="py-2 text-gray-700 font-medium">Guides</div>
+            <Link href="/guides/complete-streaming-setup-2025" className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
+              Complete Streaming Setup 2025
+            </Link>
+            <Link href="/guides/xlr-vs-usb-microphones-2025" className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
+              XLR vs USB Microphones 2025
+            </Link>
+            <Link href="/guides/headphones-vs-earbuds-2025" className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
+              Headphones vs Earbuds 2025
             </Link>
             <Link href="/about" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">
               About

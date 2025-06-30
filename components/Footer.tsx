@@ -65,11 +65,6 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Company & Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/lists/best-microphones-2025" className="text-gray-400 hover:text-white transition-colors">
-                  Best Microphones 2025
-                </Link>
-              </li>
-              <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
                   About Us
                 </Link>

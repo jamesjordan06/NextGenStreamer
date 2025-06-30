@@ -4,8 +4,8 @@
     "slug": "blue-yeti-blackout",
     "name": "Blue Yeti USB Mic for Recording and Streaming on PC and Mac with Blue VOCE Effects, 4 Pickup Patterns, Headphone Output and Volume Control, Mic Gain Control, Adjustable Stand, Plug & Play – Blackout",
     "description": "Professional USB microphone perfect for podcasting, streaming, gaming, and content creation. Features studio-quality sound with four pickup patterns and real-time effects.",
-    "amazonUrl": "https://amzn.to/4khMMLd",
-    "imageUrl": "https://m.media-amazon.com/images/I/511gDZ6d35L._AC_SX679_.jpg",
+    "amazonUrl": "https://amzn.to/3TdqeAh",
+    "imageUrl": "https://m.media-amazon.com/images/I/71tdpdK9cDL._AC_SX679_.jpg",
     "features": [
       "Four pickup patterns (cardioid, bidirectional, omnidirectional, stereo)",
       "Blue VO!CE real-time voice effects",
@@ -36,7 +36,7 @@
     "slug": "logitech-webcam",
     "name": "Logitech HD Pro Webcam",
     "description": "Full HD webcam with built-in privacy features.",
-    "amazonUrl": "https://amzn.to/4nrpS6M",
+    "amazonUrl": "https://amzn.to/3G4Gkcx",
     "imageUrl": "https://m.media-amazon.com/images/I/71YN85pLGcL._AC_SX679_.jpg",
     "features": ["1080p resolution", "Privacy shutter", "Dual mics"],
     "pros": ["Clear video quality", "Compatible with all OS", "Great for Zoom"],
@@ -124,7 +124,7 @@
     "slug": "elgato-stream-deck",
     "name": "Elgato Stream Deck MK.2 – Studio Controller, 15 macro keys, trigger actions in apps and software like OBS, Twitch, YouTube and more, works with Mac and PC",
     "description": "Essential content creator tool with 15 customizable LCD keys for streamlining your streaming, recording, and content creation workflow.",
-    "amazonUrl": "https://amzn.to/3GkXHps",
+    "amazonUrl": "https://amzn.to/3I2XqYH",
     "imageUrl": "https://m.media-amazon.com/images/I/51jSapFsaWL._AC_SX679_.jpg",
     "features": [
       "15 customizable LCD keys",
@@ -308,6 +308,330 @@
       "No wireless charging"
     ],
     "categories": ["Productivity"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B01N21H9WY",
+    "slug": "microphone-pop-filter",
+    "name": "Professional Microphone Pop Filter with Boom Arm Mount",
+    "description": "Essential studio accessory that eliminates plosive sounds and protects your microphone for crystal-clear audio recording.",
+    "amazonUrl": "https://amzn.to/44oTPvt",
+    "imageUrl": "https://m.media-amazon.com/images/I/51V26Z6csmL._AC_SX679_.jpg",
+    "features": [
+      "Double layer fabric design",
+      "360° flexible gooseneck arm",
+      "Universal microphone compatibility",
+      "Easy clamp-on installation",
+      "Reduces plosive sounds",
+      "Professional studio quality"
+    ],
+    "pros": [
+      "Dramatically improves audio quality",
+      "Easy to install and adjust",
+      "Durable construction",
+      "Works with all microphone types",
+      "Affordable studio upgrade"
+    ],
+    "cons": [
+      "May need readjustment over time",
+      "Takes up additional space",
+      "Requires compatible boom arm",
+      "Can obstruct view of microphone"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0C5JSHP7M",
+    "slug": "audio-interface-usb",
+    "name": "USB Audio Interface for Recording and Streaming",
+    "description": "Professional 2-channel USB audio interface perfect for podcasting, streaming, and home studio recording with XLR and instrument inputs.",
+    "amazonUrl": "https://amzn.to/4evnubl",
+    "imageUrl": "https://m.media-amazon.com/images/I/61LbaMsV58L._AC_SX466_.jpg",
+    "features": [
+      "2 XLR/TRS combo inputs",
+      "48V phantom power",
+      "Zero-latency monitoring",
+      "USB-C connectivity",
+      "High-quality preamps",
+      "Compact desktop design"
+    ],
+    "pros": [
+      "Professional XLR microphone support",
+      "Clean preamps with low noise",
+      "Zero-latency monitoring",
+      "Compact and portable",
+      "Great value for home studios"
+    ],
+    "cons": [
+      "Limited to 2 inputs",
+      "Requires USB power",
+      "Learning curve for beginners",
+      "May need additional drivers"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B09BYFHL25",
+    "slug": "audio-technica-ath-m50x",
+    "name": "Audio-Technica ATH-M50x Professional Studio Monitor Headphones",
+    "description": "Professional studio monitor headphones trusted by audio engineers worldwide, featuring exceptional clarity and deep, accurate bass response.",
+    "amazonUrl": "https://amzn.to/4lg7hJt",
+    "imageUrl": "https://m.media-amazon.com/images/I/71mniDSXh1L._AC_SY879_.jpg",
+    "features": [
+      "45mm large-aperture drivers",
+      "Professional-grade audio quality",
+      "90° swiveling earcups",
+      "Detachable cables included",
+      "Foldable design for portability",
+      "Closed-back circumaural design"
+    ],
+    "pros": [
+      "Exceptional audio clarity and accuracy",
+      "Comfortable for extended wear",
+      "Industry-standard for monitoring",
+      "Durable professional construction",
+      "Great value for professional quality"
+    ],
+    "cons": [
+      "Can be tight on larger heads initially",
+      "Not ideal for casual listening",
+      "Requires break-in period",
+      "No wireless option"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0C63HDHPR",
+    "slug": "lg-ultragear-27-gaming-monitor",
+    "name": "LG UltraGear 27\" Gaming Monitor - QHD IPS 240Hz 1ms GTG, NVIDIA G-SYNC Compatible, AMD FreeSync Premium, HDR10, sRGB 99%, Adjustable Stand, 3-Side Virtually Borderless",
+    "description": "Professional 27-inch QHD gaming monitor perfect for streaming, content creation, and gaming with ultra-fast 240Hz refresh rate and stunning color accuracy.",
+    "amazonUrl": "https://amzn.to/3HZgBmr",
+    "imageUrl": "https://m.media-amazon.com/images/I/81El4887iLL._AC_SX679_.jpg",
+    "features": [
+      "27\" QHD (2560x1440) IPS display",
+      "240Hz refresh rate with 1ms GTG response time",
+      "NVIDIA G-SYNC Compatible & AMD FreeSync Premium",
+      "HDR10 support with sRGB 99% color gamut",
+      "Height, tilt, pivot adjustable stand",
+      "3-side virtually borderless design"
+    ],
+    "pros": [
+      "Excellent for streaming and gaming",
+      "Ultra-fast 240Hz refresh rate",
+      "Accurate color reproduction",
+      "Multiple connectivity options",
+      "Professional adjustable stand"
+    ],
+    "cons": [
+      "Premium price point",
+      "Requires powerful graphics card for full potential",
+      "Large desk footprint",
+      "May be overkill for basic streaming"
+    ],
+    "categories": ["Productivity"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0B3F8V4JG",
+    "slug": "logitech-g-pro-x-2-lightspeed",
+    "name": "Logitech G PRO X 2 Lightspeed Wireless Gaming Headset - 50mm Graphene Drivers, 2.0-7.1 Surround, Bluetooth/USB/3.5mm Aux, PS4/PS5/PC/Nintendo Switch Compatible",
+    "description": "Professional wireless gaming headset with 50mm graphene drivers, ultra-low latency Lightspeed wireless technology, and 30+ hour battery life - perfect for competitive gaming and streaming.",
+    "amazonUrl": "https://amzn.to/4nJ5f6v",
+    "imageUrl": "https://m.media-amazon.com/images/I/71c+YOxfTGL._AC_SX679_.jpg",
+    "features": [
+      "50mm graphene drivers for premium audio quality",
+      "Lightspeed wireless technology with ultra-low latency",
+      "30+ hour battery life with quick charge capability",
+      "Triple connectivity: Bluetooth, USB, and 3.5mm aux",
+      "2.0-7.1 surround sound with spatial audio",
+      "Compatible with PS4, PS5, PC, and Nintendo Switch",
+      "Professional-grade detachable microphone",
+      "Memory foam ear cushions for extended comfort"
+    ],
+    "pros": [
+      "Exceptional wireless performance with no delay",
+      "Outstanding 30+ hour battery life",
+      "Premium graphene drivers deliver crisp audio",
+      "Comfortable for extended gaming sessions",
+      "Multiple connectivity options for versatility",
+      "Professional build quality and durability",
+      "4.2/5 stars with 1,218+ verified reviews",
+      "Compatible with multiple gaming platforms"
+    ],
+    "cons": [
+      "Premium price point for wireless gaming",
+      "Requires Logitech G HUB software for full features",
+      "Larger size may not suit smaller heads",
+      "Microphone quality good but not studio-level"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0DFX4TPS6",
+    "slug": "steelseries-arctis-gamebuds",
+    "name": "SteelSeries Arctis GameBuds - Premium Wireless Gaming Earbuds for Xbox, PS5, Switch, PC, Mobile with Active Noise Cancellation, 2.4GHz + Bluetooth, 40-Hour Battery",
+    "description": "Revolutionary wireless gaming earbuds featuring ultra-low latency 2.4GHz connection, Active Noise Cancellation, and 100+ game-specific audio presets. The future of gaming audio is finally here.",
+    "amazonUrl": "https://amzn.to/44lNAss",
+    "imageUrl": "https://m.media-amazon.com/images/I/61L6J4ujqxL._AC_SX679_.jpg",
+    "features": [
+      "High-speed 2.4GHz wireless + Quick-Switch Bluetooth 5.3",
+      "Active Noise Cancellation with transparency mode",
+      "100+ PS5 audio presets with Arctis Companion App",
+      "Immersive 360° Spatial Audio on PlayStation, PC, mobile",
+      "10-hour battery with Qi Wireless Charging Case (40h total)",
+      "IP55 water/dust/dirt resistance protection",
+      "Multi-platform: Xbox, PS5, Switch, PC, VR, mobile",
+      "Up to 7x faster than Bluetooth connectivity",
+      "Built-in microphones with on-ear button controls",
+      "Professional fit tested by T1 esports champions"
+    ],
+    "pros": [
+      "Ultra-low latency 2.4GHz for competitive gaming",
+      "Outstanding 40-hour total battery life with wireless charging",
+      "Professional Active Noise Cancellation technology",
+      "Extensive game-specific audio preset library",
+      "True multi-platform compatibility with one dongle",
+      "Water and dust resistant for active use",
+      "Quick-Switch between gaming and mobile audio",
+      "Tested and approved by professional esports players"
+    ],
+    "cons": [
+      "Premium price point for wireless earbuds",
+      "Requires separate dongles for different platforms",
+      "May be overkill for casual mobile gaming",
+      "Learning curve for advanced features and presets"
+    ],
+    "categories": ["Audio"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0DBJ5DBL8",
+    "slug": "shure-mv6-gaming-microphone",
+    "name": "Shure MV6 Gaming Microphone - Dynamic USB PC Mic for Video Games & Streaming with Desktop Stand, Background Noise Cancellation, Tap-to-Mute & Real-Time Headphone Monitoring",
+    "description": "Professional gaming microphone from legendary audio brand Shure, featuring dynamic capsule technology with advanced background noise cancellation and real-time monitoring - designed specifically for gamers and streamers.",
+    "amazonUrl": "https://amzn.to/4kgJ8RJ",
+    "imageUrl": "https://m.media-amazon.com/images/I/61u0AqBTp3L._AC_SY879_.jpg",
+    "features": [
+      "Dynamic USB microphone with professional Shure quality",
+      "Advanced background noise cancellation technology",
+      "Tap-to-mute functionality for instant audio control",
+      "3.5mm headphone output for real-time monitoring",
+      "USB-C connectivity for modern gaming setups",
+      "Included sturdy metal desktop stand",
+      "MOTIV Mix software for professional audio control",
+      "Auto-level and real-time denoiser features",
+      "Optimized for gaming, streaming, and content creation",
+      "Amazon's Choice product with 4.5/5 stars (425+ reviews)"
+    ],
+    "pros": [
+      "Legendary Shure audio quality and reliability",
+      "Exceptional background noise rejection",
+      "Professional dynamic microphone technology",
+      "Real-time headphone monitoring built-in",
+      "Easy plug-and-play USB-C setup",
+      "Robust metal construction and stand",
+      "Advanced software control with MOTIV Mix",
+      "Perfect for mechanical keyboard users",
+      "Tap-to-mute convenience for streaming"
+    ],
+    "cons": [
+      "Premium price point for gaming microphone",
+      "Requires close-mic technique for best results",
+      "Short USB-C cable included (2 feet)",
+      "May need USB-A adapter for older computers",
+      "MOTIV Mix software learning curve"
+    ],
+    "categories": ["Microphones"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B08KFL3SFV",
+    "slug": "hyperx-solocast",
+    "name": "HyperX SoloCast – USB Condenser Gaming Microphone, Tap-to-Mute Sensor with LED Indicator, Cardioid Pickup Pattern, Gaming, Streaming, Podcasts, Compatible with PC, PS4, PS5, Mac – Black",
+    "description": "Professional USB gaming microphone with tap-to-mute functionality, perfect for streaming, gaming, content creation, and video calls with plug-and-play simplicity and exceptional sound quality.",
+    "amazonUrl": "https://amzn.to/3Z8KwYz",
+    "imageUrl": "https://m.media-amazon.com/images/I/61qh7VG4pCL._AC_SX679_.jpg",
+    "features": [
+      "Tap-to-mute sensor with LED status indicator",
+      "Cardioid pickup pattern for focused audio capture",
+      "16/24-bit audio recording, up to 96kHz sample rate",
+      "USB-C to USB-A cable included for wide compatibility",
+      "Plug & play setup with no drivers required",
+      "Flexible adjustable desktop stand included",
+      "Compact and portable design at only 261g",
+      "Compatible with Windows, Mac, PS4, PS5, and more"
+    ],
+    "pros": [
+      "Exceptional sound quality for the price point",
+      "Simple plug-and-play setup with no software needed",
+      "Convenient tap-to-mute functionality with visual indicator",
+      "Compact and lightweight for easy portability",
+      "Great for Discord, Zoom, streaming, and gaming",
+      "Wide device compatibility across platforms",
+      "Impressive 4.5/5 star rating from users",
+      "Perfect for content creators on a budget"
+    ],
+    "cons": [
+      "No headphone monitoring output jack",
+      "Short desktop stand may require repositioning",
+      "Single cardioid pattern only (no pattern switching)",
+      "Can pick up mechanical keyboard typing noise",
+      "No built-in shock mount or pop filter included"
+    ],
+    "categories": ["Microphones"],
+    "priceNote": "Check current price on Amazon",
+    "isAffiliate": true
+  },
+  {
+    "asin": "B0BJL8SJ59",
+    "slug": "elgato-stream-deck-plus",
+    "name": "Elgato Stream Deck +, Audio Mixer, Production Console and Studio Controller for Content Creators, Streaming, Gaming, with Customizable Touch Strip Dials and LCD Keys, Works with Mac and PC",
+    "description": "Advanced streaming control surface combining the power of Stream Deck with professional audio mixing capabilities. Features customizable LCD keys and innovative touch strip dials for ultimate workflow control.",
+    "amazonUrl": "https://amzn.to/3Z9LwKx",
+    "imageUrl": "https://m.media-amazon.com/images/I/61JGUEIcAQL._AC_SX679_.jpg",
+    "features": [
+      "8 customizable LCD keys for instant control",
+      "4 touch strip dials with visual feedback",
+      "Integrated audio mixer functionality",
+      "Advanced production console capabilities",
+      "Works with OBS, Streamlabs, Twitch, YouTube",
+      "Compatible with Mac and PC",
+      "Drag-and-drop software configuration",
+      "Supports multi-actions and folder organization",
+      "Professional-grade build quality",
+      "Stream Deck software ecosystem integration"
+    ],
+    "pros": [
+      "Revolutionary touch strip dials for precise control",
+      "Combines streaming control with audio mixing",
+      "Professional production console features",
+      "Intuitive software with extensive customization",
+      "Perfect for advanced streamers and content creators",
+      "Seamless integration with popular streaming software",
+      "Excellent build quality and reliability",
+      "Expandable functionality through plugins",
+      "Ideal for complex multi-scene streaming setups"
+    ],
+    "cons": [
+      "Premium price point for advanced features",
+      "Learning curve for new users",
+      "Requires Stream Deck software setup",
+      "May be overkill for basic streaming needs",
+      "Takes up more desk space than standard Stream Deck"
+    ],
+    "categories": ["Streaming"],
     "priceNote": "Check current price on Amazon",
     "isAffiliate": true
   }
