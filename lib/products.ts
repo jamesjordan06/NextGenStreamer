@@ -23,9 +23,22 @@ export function getProductsByCategory(category: string): Product[] {
   )
 }
 
-export function getFeaturedProducts(limit: number = 3): Product[] {
-  // For now, return first few products. In the future, this could be based on a featured flag
-  return products.slice(0, limit)
+export function getFeaturedProducts(limit: number = 6): Product[] {
+  // Featured premium products: Shure, Elgato, and quality monitors
+  const featuredSlugs = [
+    'shure-sm7b',                        // Shure SM7B - Industry standard microphone
+    'elgato-stream-deck-xl',             // Elgato Stream Deck XL - Premium streaming controller
+    'lg-ultragear-27-gaming-monitor',    // LG UltraGear 27" - High-refresh gaming monitor
+    'elgato-stream-deck-plus',           // Elgato Stream Deck + - Audio mixer
+    'alienware-aw3225qf-gaming-monitor', // Alienware 4K QD-OLED - Premium monitor
+    'elgato-stream-deck'                 // Elgato Stream Deck MK.2 - Standard option
+  ]
+  
+  const featuredProducts = featuredSlugs
+    .map(slug => products.find(product => product.slug === slug))
+    .filter(product => product !== undefined) as Product[]
+  
+  return featuredProducts.slice(0, limit)
 }
 
 export function searchProducts(query: string): Product[] {

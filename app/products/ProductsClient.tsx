@@ -20,7 +20,7 @@ export default function ProductsClient() {
   }, [categoryParam])
   
   const allProducts = getAllProducts()
-  const categories = ['all', 'microphones', 'webcams', 'lighting', 'streaming', 'audio', 'productivity']
+  const categories = ['all', 'microphones', 'webcams', 'monitors', 'lighting', 'streaming', 'audio', 'productivity']
   
   const filteredProducts = useMemo(() => {
     let filtered = selectedCategory === 'all' 

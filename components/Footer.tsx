@@ -1,17 +1,21 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">NG</span>
-              </div>
-              <span className="text-xl font-bold">NextGenStreamer</span>
+            <div className="flex items-center mb-4">
+              <Image
+                src="/nextgenstreamer-logo-cropped.png"
+                alt="NextGenStreamer Logo"
+                height={40}
+                width={160}
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-400 text-sm">
               Your trusted source for creator gear recommendations and reviews.
@@ -38,6 +42,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/products?category=monitors" className="text-gray-400 hover:text-white transition-colors">
+                  Monitors
+                </Link>
+              </li>
+              <li>
                 <Link href="/products?category=lighting" className="text-gray-400 hover:text-white transition-colors">
                   Lighting
                 </Link>
@@ -55,6 +64,33 @@ export default function Footer() {
               <li>
                 <Link href="/products?category=productivity" className="text-gray-400 hover:text-white transition-colors">
                   Productivity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Software & Tools */}
+          <div>
+            <h3 className="font-semibold mb-4">Software & Tools</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="https://streamlabs.pxf.io/6yzXgq" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  Streamlabs Software
+                </a>
+              </li>
+              <li>
+                <Link href="/guides/complete-streaming-setup-2025" className="text-gray-400 hover:text-white transition-colors">
+                  Setup Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/xlr-vs-usb-microphones-2025" className="text-gray-400 hover:text-white transition-colors">
+                  Microphone Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/headphones-vs-earbuds-2025" className="text-gray-400 hover:text-white transition-colors">
+                  Audio Guide
                 </Link>
               </li>
             </ul>

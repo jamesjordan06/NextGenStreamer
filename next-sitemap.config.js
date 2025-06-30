@@ -17,7 +17,7 @@ module.exports = {
   additionalPaths: async (config) => {
     const result = []
     
-    // Add specific paths
+    // Add specific pages
     result.push({
       loc: '/about',
       changefreq: 'weekly',
@@ -46,10 +46,39 @@ module.exports = {
       lastmod: new Date().toISOString(),
     })
     
+    // All Guide Pages
+    result.push({
+      loc: '/guides/how-to-start-streaming-2025',
+      changefreq: 'weekly',
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    })
+    
     result.push({
       loc: '/guides/complete-streaming-setup-2025',
       changefreq: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    })
+    
+    result.push({
+      loc: '/guides/streamlabs-vs-obs-2025',
+      changefreq: 'weekly',
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    })
+    
+    result.push({
+      loc: '/guides/how-to-monetize-streaming-low-viewers-2025',
+      changefreq: 'weekly',
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    })
+    
+    result.push({
+      loc: '/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025',
+      changefreq: 'weekly',
+      priority: 0.9,
       lastmod: new Date().toISOString(),
     })
     
@@ -62,6 +91,14 @@ module.exports = {
     
     result.push({
       loc: '/guides/headphones-vs-earbuds-2025',
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
+    })
+    
+    // Product Lists
+    result.push({
+      loc: '/lists/best-microphones-2025',
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date().toISOString(),

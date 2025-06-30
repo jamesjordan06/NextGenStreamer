@@ -3,7 +3,7 @@
 interface AmazonCTAButtonProps {
   url: string
   text?: string
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'gaming' | 'neon'
   size?: 'sm' | 'md' | 'lg'
   productName?: string
 }
@@ -18,22 +18,22 @@ const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
 
 export default function AmazonCTAButton({ 
   url, 
-  text = "Check it on Amazon →", 
-  variant = 'primary',
+  text = "🛒 Check it on Amazon →", 
+  variant = 'gaming',
   size = 'md',
   productName = 'Unknown Product'
 }: AmazonCTAButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
-  
   const variantClasses = {
-    primary: "bg-amazon-yellow hover:bg-orange-500 text-black focus:ring-amazon-yellow",
-    secondary: "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300"
+    primary: "btn-primary",
+    secondary: "btn-secondary",
+    gaming: "btn-gaming",
+    neon: "btn-neon"
   }
   
   const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg"
+    sm: "px-6 py-2 text-sm",
+    md: "px-8 py-3 text-base",
+    lg: "px-10 py-4 text-lg"
   }
 
   const handleClick = () => {
@@ -64,9 +64,14 @@ export default function AmazonCTAButton({
       target="_blank"
       rel="nofollow sponsored noreferrer"
       onClick={handleClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]}`}
+      className={`${variantClasses[variant]} ${sizeClasses[size]} text-center group/amazon`}
     >
-      {text}
+      <span className="flex items-center justify-center">
+        <span>{text}</span>
+        <svg className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/amazon:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </span>
     </a>
   )
 } 
