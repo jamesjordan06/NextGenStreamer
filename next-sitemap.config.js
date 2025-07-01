@@ -96,6 +96,21 @@ module.exports = {
       lastmod: new Date().toISOString(),
     })
     
+    // Review Pages
+    result.push({
+      loc: '/guides/shure-sm7b-review-worth-it',
+      changefreq: 'weekly',
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    })
+    
+    result.push({
+      loc: '/guides/logitech-c920-review-worth-it',
+      changefreq: 'weekly',
+      priority: 0.9,
+      lastmod: new Date().toISOString(),
+    })
+    
     // Product Lists
     result.push({
       loc: '/lists/best-microphones-2025',
