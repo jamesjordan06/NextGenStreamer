@@ -5,9 +5,9 @@ export default function WhyLearnWithUsSection() {
     <section className="py-16 md:py-24 bg-white">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-2">Why Choose Us</p>
+          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-2">The NextGen Edge</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-text-primary mb-4 sm:mb-6">
-            Why Learn Streaming With Us?
+            What Makes Our Streaming Advice Different?
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
             Real experience, honest advice, and actionable guidance from creators who've been where you are.
@@ -20,7 +20,7 @@ export default function WhyLearnWithUsSection() {
             <BookOpenIcon className="w-10 h-10 text-brand-accent mx-auto mb-4" />
             <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Real Experience</h3>
             <p className="text-text-secondary text-sm leading-relaxed">
-              Written by actual streamers who've made every mistake so you don't have to. Learn from real successes and failures.
+              Our guides are battle-tested by actual streamers. We've made the mistakes so you can skip them and learn from what truly works.
             </p>
           </div>
           {/* Feature Card 2 */}
@@ -28,15 +28,15 @@ export default function WhyLearnWithUsSection() {
             <CurrencyDollarIcon className="w-10 h-10 text-brand-accent mx-auto mb-4" />
             <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Budget-Conscious</h3>
             <p className="text-text-secondary text-sm leading-relaxed">
-              Starter setups from $300, pro setups explained clearly, and honest warnings about expensive gear you don't need.
+              Whether you're starting with $300 or aiming for a pro setup, we show you what's worth your money and what's just hype.
             </p>
           </div>
           {/* Feature Card 3 */}
           <div className="bg-brand-light border border-border-neutral-light rounded-lg p-6 text-center fade-in-up stagger-2 hover:shadow-md transition-shadow duration-200">
             <CheckBadgeIcon className="w-10 h-10 text-brand-accent mx-auto mb-4" />
-            <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Actionable Steps</h3>
+            <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Clear, Actionable Advice</h3>
             <p className="text-text-secondary text-sm leading-relaxed">
-              No fluff or theory. Every guide includes specific next steps, exact equipment lists, and troubleshooting help.
+              Forget the fluff. Our guides give you clear next steps, practical gear recommendations, and quick troubleshooting tips.
             </p>
           </div>
         </div>

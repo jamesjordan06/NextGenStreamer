@@ -13,14 +13,14 @@ export default function FinalCTASection() {
         <div className="max-w-3xl mx-auto text-white">
           <LightBulbIcon className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 opacity-75" />
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold mb-6 sm:mb-8">
-            Ready to Start Your Streaming Journey?
+            Your Next Level Stream Awaits
           </h2>
           <p className="text-lg sm:text-xl opacity-90 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto">
-            Join thousands of creators who started with our guides. From complete beginners to full-time streamers - your journey starts here.
+            Thousands of creators, from first-timers to full-time pros, have launched their channels with our help. Your journey to a better stream begins now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <Link href="/guides/how-to-start-streaming-2025" className={primaryWhiteButtonClasses}>
-              Start Learning Free
+              Jump Into Our Free Guides
             </Link>
             <a
               href="https://streamlabs.pxf.io/6yzXgq"
@@ -31,7 +31,7 @@ export default function FinalCTASection() {
               Get Streamlabs Free
             </a>
             <Link href="/guides/complete-streaming-setup-2025" className={lightOutlineButtonClasses}>
-              Equipment Guide
+              Find Your Perfect Gear
             </Link>
           </div>
         </div>

@@ -23,10 +23,10 @@ export default function ProductsPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Creator Gear & Equipment
+            The Best Gear for Your Stream
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover professional-grade equipment to elevate your content creation game.
+            Browse our curated selection of mics, cameras, lighting, and more – all tested and approved to help you create amazing content.
           </p>
         </div>
 

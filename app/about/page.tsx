@@ -15,7 +15,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About NextGenStreamer
+            Our Story: Fueling Your Creator Journey
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
             We're passionate about helping content creators find the perfect gear to bring their vision to life.
@@ -32,9 +32,9 @@ export default function AboutPage() {
               make informed decisions about their gear investments.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              That's where we come in. NextGenStreamer curates and reviews the best creator equipment, providing 
-              honest recommendations based on real-world testing and community feedback. We believe great content 
-              deserves great tools, regardless of your budget or experience level.
+              That's where NextGenStreamer steps in. We cut through the noise, curating and reviewing top-tier creator equipment.
+              You get honest, field-tested recommendations backed by community insights, because we believe awesome content
+              deserves awesome tools – no matter your budget or experience.
             </p>
           </div>
 
@@ -45,15 +45,13 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Product Research</h3>
                 <p className="text-gray-600 text-sm">
-                  We thoroughly research and test products across different price ranges and use cases to provide 
-                  comprehensive recommendations for every type of creator.
+                  We dive deep, researching and testing gear for every creator type and budget, so you get recommendations you can trust.
                 </p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Honest Reviews</h3>
                 <p className="text-gray-600 text-sm">
-                  Our reviews include real pros and cons, helping you understand exactly what you're getting 
-                  before making a purchase decision.
+                  No sugar-coating here. Our reviews lay out the real pros and cons, so you know exactly what you’re investing in.
                 </p>
               </div>
               <div>
@@ -66,8 +64,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Buying Guides</h3>
                 <p className="text-gray-600 text-sm">
-                  Our comprehensive guides help you understand what to look for in creator equipment, 
-                  from technical specifications to practical considerations.
+                  Our detailed guides demystify creator equipment, breaking down tech specs and practical must-knows so you can choose wisely.
                 </p>
               </div>
             </div>
