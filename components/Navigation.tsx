@@ -13,17 +13,40 @@ const DropdownLink = ({ href, title, description }: { href: string, title: strin
   </Link>
 );
 
-// Simplified Helper component for mobile menu links
+// Simplified Helper component for mobile menu links (without description)
 const SimpleMobileLink = ({ href, title, onClick }: { href: string, title: string, onClick: () => void }) => (
   <Link href={href} className="block p-3 rounded-md hover:bg-gray-100 text-text-primary font-medium transition-colors duration-150" onClick={onClick}>
     {title}
   </Link>
 );
 
+// Mobile navigation link that can optionally show a description
+const MobileNavLink = ({
+  href,
+  title,
+  description,
+  onClick,
+}: {
+  href: string;
+  title: string;
+  description?: string;
+  onClick: () => void;
+}) => (
+  <Link
+    href={href}
+    className="block p-3 rounded-md hover:bg-gray-100 transition-colors duration-150"
+    onClick={onClick}
+  >
+    <div className="text-text-primary font-medium">{title}</div>
+    {description && <div className="text-sm text-text-secondary">{description}</div>}
+  </Link>
+);
+
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  // const navLinkClasses = "text-text-primary hover:text-brand-primary font-medium transition-colors duration-150"; // Already applied directly or via dropdownButtonClasses
+  const navLinkClasses =
+    "text-text-primary hover:text-brand-primary font-medium transition-colors duration-150";
   const dropdownButtonClasses = "flex items-center space-x-1 " + navLinkClasses;
   const ctaButtonClasses = "bg-brand-primary hover:bg-brand-primary-hover text-white font-semibold py-2 px-4 rounded-md transition-colors duration-150 text-sm";
 
