@@ -1,5 +1,37 @@
 [
   {
+    "asin": "B006JH8T3S",
+    "slug": "logitech-c920-hd-pro-webcam",
+    "name": "Logitech C920 HD Pro Webcam",
+    "description": "Full HD 1080p webcam with autofocus and automatic light correction. The budget king of streaming webcams - reliable, clear, and plug-and-play simple.",
+    "amazonUrl": "https://amzn.to/4kAOpUB",
+    "imageUrl": "https://m.media-amazon.com/images/I/71SAamTGWQL._AC_SX679_.jpg",
+    "features": [
+      "Full HD 1080p at 30fps streaming",
+      "Autofocus and automatic light correction",
+      "Dual stereo microphones built-in",
+      "Works with OBS, Streamlabs, Zoom, Discord",
+      "Universal clip fits most monitors",
+      "USB 2.0 plug-and-play connectivity"
+    ],
+    "pros": [
+      "Incredible value for money (~$70)",
+      "Plug-and-play simplicity",
+      "Clear, professional 1080p video",
+      "Reliable autofocus system",
+      "Built like a tank - very durable"
+    ],
+    "cons": [
+      "Limited to 30fps (no 60fps option)",
+      "Needs good lighting to shine",
+      "Built-in mic is just okay",
+      "No privacy shutter on standard model"
+    ],
+    "categories": ["Webcams"],
+    "priceNote": "Often around $69.99 - excellent value for the quality",
+    "isAffiliate": true
+  },
+  {
     "asin": "B00N1YPXW2",
     "slug": "blue-yeti-blackout",
     "name": "Blue Yeti USB Mic for Recording and Streaming on PC and Mac with Blue VOCE Effects, 4 Pickup Patterns, Headphone Output and Volume Control, Mic Gain Control, Adjustable Stand, Plug & Play – Blackout",

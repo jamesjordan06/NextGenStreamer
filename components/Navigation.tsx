@@ -36,10 +36,10 @@ export default function Navigation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-80 glass-morphism rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <div className="grid gap-3">
-                    <Link href="/guides/how-to-start-streaming-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
+                    <Link href="/guides/how-to-start-streaming-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
                       <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm">🚀</span>
                       </div>
@@ -48,7 +48,7 @@ export default function Navigation() {
                         <div className="text-sm text-gray-600">Start streaming from zero</div>
                       </div>
                     </Link>
-                    <Link href="/guides/complete-streaming-setup-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
+                    <Link href="/guides/complete-streaming-setup-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
                       <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm">⚙️</span>
                       </div>
@@ -57,16 +57,7 @@ export default function Navigation() {
                         <div className="text-sm text-gray-600">Equipment & configuration</div>
                       </div>
                     </Link>
-                    <Link href="/guides/streamlabs-vs-obs-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
-                      <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm">🎮</span>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-gray-900 group-hover/item:text-green-600 transition-colors">Streamlabs vs OBS</div>
-                        <div className="text-sm text-gray-600">Software comparison</div>
-                      </div>
-                    </Link>
-                    <Link href="/guides/how-to-monetize-streaming-low-viewers-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
+                    <Link href="/guides/how-to-monetize-streaming-low-viewers-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
                       <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm">💰</span>
                       </div>
@@ -75,13 +66,56 @@ export default function Navigation() {
                         <div className="text-sm text-gray-600">Earn with low viewers</div>
                       </div>
                     </Link>
-                    <Link href="/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
+                    <Link href="/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
                       <div className="w-10 h-10 bg-gradient-to-r from-pink-400 to-red-500 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm">📱</span>
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900 group-hover/item:text-red-600 transition-colors">Vertical Streaming</div>
                         <div className="text-sm text-gray-600">TikTok, Reels & Shorts</div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Reviews Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center space-x-1 text-gray-700 hover:text-purple-600 font-medium transition-all duration-300 group">
+                <span>Reviews</span>
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="grid gap-3">
+                    <Link href="/guides/streamlabs-vs-obs-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">🎮</span>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 group-hover/item:text-green-600 transition-colors">Streamlabs vs OBS</div>
+                        <div className="text-sm text-gray-600">Software comparison</div>
+                      </div>
+                    </Link>
+                    <Link href="/guides/shure-sm7b-review-worth-it" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">🎤</span>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 group-hover/item:text-purple-600 transition-colors">Shure SM7B Review</div>
+                        <div className="text-sm text-gray-600">Is the legendary mic worth it?</div>
+                      </div>
+                    </Link>
+                    <Link href="/guides/logitech-c920-review-worth-it" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">📹</span>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors">Logitech C920 Review</div>
+                        <div className="text-sm text-gray-600">King of budget streaming?</div>
                       </div>
                     </Link>
                   </div>
@@ -97,10 +131,10 @@ export default function Navigation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-72 glass-morphism rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute top-full left-0 mt-2 w-72 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <div className="grid gap-3">
-                    <Link href="/products" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
+                    <Link href="/products" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
                       <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm">🛒</span>
                       </div>
@@ -109,7 +143,7 @@ export default function Navigation() {
                         <div className="text-sm text-gray-600">Browse recommended gear</div>
                       </div>
                     </Link>
-                    <Link href="/lists/best-microphones-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/20 transition-all duration-300 group/item">
+                    <Link href="/lists/best-microphones-2025" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
                       <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center">
                         <span className="text-white text-sm">🎤</span>
                       </div>
@@ -167,10 +201,6 @@ export default function Navigation() {
                   <div className="font-medium text-gray-900">⚙️ Complete Setup Guide</div>
                   <div className="text-sm text-gray-600">Equipment & configuration</div>
                 </Link>
-                <Link href="/guides/streamlabs-vs-obs-2025" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
-                  <div className="font-medium text-gray-900">🎮 Streamlabs vs OBS</div>
-                  <div className="text-sm text-gray-600">Software comparison</div>
-                </Link>
                 <Link href="/guides/how-to-monetize-streaming-low-viewers-2025" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
                   <div className="font-medium text-gray-900">💰 Monetization Guide</div>
                   <div className="text-sm text-gray-600">Earn with low viewers</div>
@@ -178,6 +208,27 @@ export default function Navigation() {
                 <Link href="/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
                   <div className="font-medium text-gray-900">📱 Vertical Streaming</div>
                   <div className="text-sm text-gray-600">TikTok, Reels & Shorts</div>
+                </Link>
+              </div>
+            </div>
+
+            {/* Mobile Reviews Section */}
+            <div>
+              <div className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="gradient-text">⭐ Reviews</span>
+              </div>
+              <div className="space-y-3 ml-4">
+                <Link href="/guides/streamlabs-vs-obs-2025" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
+                  <div className="font-medium text-gray-900">🎮 Streamlabs vs OBS</div>
+                  <div className="text-sm text-gray-600">Software comparison</div>
+                </Link>
+                <Link href="/guides/shure-sm7b-review-worth-it" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
+                  <div className="font-medium text-gray-900">🎤 Shure SM7B Review</div>
+                  <div className="text-sm text-gray-600">Is the legendary mic worth it?</div>
+                </Link>
+                <Link href="/guides/logitech-c920-review-worth-it" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
+                  <div className="font-medium text-gray-900">📹 Logitech C920 Review</div>
+                  <div className="text-sm text-gray-600">King of budget streaming?</div>
                 </Link>
               </div>
             </div>
