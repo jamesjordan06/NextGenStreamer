@@ -11,20 +11,20 @@ export default function HeroSection() {
         <div className="max-w-3xl mx-auto">
           <div className="fade-in-up">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-text-on-dark mb-6 sm:mb-8 leading-tight">
-              Master Your Streaming Journey
+              Unlock Your Streaming Potential
             </h1>
           </div>
           <div className="fade-in-up stagger-1">
             <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto">
-              Learn from real streamers, get expert guidance, and discover the exact equipment that will take your content to the next level.
+              Get insights from seasoned streamers, practical advice, and find the right gear to make your stream shine.
             </p>
           </div>
           <div className="fade-in-up stagger-2 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <Link href="/guides/how-to-start-streaming-2025" className={`${primaryButtonClasses}`}>
-              Start Learning Now
+              Explore Our Guides
             </Link>
             <Link href="/guides/complete-streaming-setup-2025" className={lightOutlineButtonClasses}>
-              Complete Setup Guide
+              Gear Up: Setup Guide
             </Link>
           </div>
         </div>

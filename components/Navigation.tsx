@@ -129,7 +129,7 @@ export default function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/guides/how-to-start-streaming-2025" className={ctaButtonClasses}>
-              Start Learning
+              View Guides
             </Link>
           </div>
 
@@ -182,7 +182,7 @@ export default function Navigation() {
 
             <div className="px-3 pt-4">
               <Link href="/guides/how-to-start-streaming-2025" className={`${ctaButtonClasses} block text-center w-full`} onClick={() => setIsOpen(false)}>
-                Start Learning
+                View Guides
               </Link>
             </div>
           </div>

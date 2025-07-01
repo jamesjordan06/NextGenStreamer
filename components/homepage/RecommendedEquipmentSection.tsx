@@ -14,12 +14,12 @@ export default function RecommendedEquipmentSection() {
     <section className="py-16 md:py-24">
       <div className="container">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-2">Premium Gear</p>
+          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-2">Gear That Gets Results</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-text-primary mb-4 sm:mb-6">
-            Recommended Equipment
+            Our Top Streaming Gear Picks
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Carefully tested gear that our guides recommend. Every product is featured because it delivers real value for creators.
+            We've rigorously tested this gear so you can invest with confidence. These are the products that deliver real value for streamers like you.
           </p>
         </div>
 

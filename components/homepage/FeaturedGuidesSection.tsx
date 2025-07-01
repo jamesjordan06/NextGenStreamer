@@ -11,12 +11,12 @@ export default function FeaturedGuidesSection() {
     <section className="py-16 md:py-24">
       <div className="container">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-2">Education First</p>
+          <p className="text-sm font-semibold text-brand-primary uppercase tracking-wider mb-2">Level Up Your Know-How</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-text-primary mb-4 sm:mb-6">
-            Start Your Streaming Education
+            Your Go-To Streaming Playbook
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about streaming, equipment, and building your audience - from complete beginners to advanced creators.
+            From first stream to pro strats: find clear guides on gear, growth, and making great content.
           </p>
         </div>
 
@@ -26,10 +26,10 @@ export default function FeaturedGuidesSection() {
             {/* Optional: Icon can be added here e.g. <AcademicCapIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" /> */}
             <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Complete Beginner's Guide</h3>
             <p className="text-text-secondary text-sm mb-4 flex-grow">
-              Your step-by-step roadmap from zero to streaming success. Platform selection, audience building, and monetization strategies.
+              New to streaming? We'll take you from zero to hero, covering platforms, audience growth, and how to start earning.
             </p>
             <Link href="/guides/how-to-start-streaming-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
-              Start Your Journey <ArrowRightIcon className="w-4 h-4 ml-1.5" />
+              Begin Your Adventure <ArrowRightIcon className="w-4 h-4 ml-1.5" />
             </Link>
           </div>
 
@@ -38,7 +38,7 @@ export default function FeaturedGuidesSection() {
             {/* Optional: Icon e.g. <CogIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" /> */}
             <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Complete Setup Guide</h3>
             <p className="text-text-secondary text-sm mb-4 flex-grow">
-              Professional streaming setup from $300-$1600. Real equipment recommendations, setup tutorials, and troubleshooting.
+              Build a killer stream setup on any budget ($300-$1600+). Get our top gear picks, setup tips, and troubleshooting steps.
             </p>
             <Link href="/guides/complete-streaming-setup-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
               Build Your Setup <ArrowRightIcon className="w-4 h-4 ml-1.5" />
@@ -50,7 +50,7 @@ export default function FeaturedGuidesSection() {
             {/* Optional: Icon e.g. <AdjustmentsHorizontalIcon className="w-12 h-12 text-brand-primary mx-auto mb-4" /> */}
             <h3 className="text-xl font-heading font-semibold text-text-primary mb-3">Streamlabs vs OBS</h3>
             <p className="text-text-secondary text-sm mb-4 flex-grow">
-              Honest comparison with performance data, feature breakdown, and recommendations based on your experience level.
+              The ultimate Streamlabs vs. OBS showdown. We break down features, performance, and who wins for *your* streaming style.
             </p>
             <Link href="/guides/streamlabs-vs-obs-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
               Compare Software <ArrowRightIcon className="w-4 h-4 ml-1.5" />
@@ -59,7 +59,7 @@ export default function FeaturedGuidesSection() {
         </div>
 
         <div className="text-center">
-          <p className="text-text-secondary mb-6 text-base sm:text-lg">More guides covering monetization, vertical streaming, microphones, and advanced techniques</p>
+          <p className="text-text-secondary mb-6 text-base sm:text-lg">Ready for more? Dive into guides on making money, streaming to TikTok, choosing mics, and other advanced tips.</p>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
             <Link href="/guides/how-to-monetize-streaming-low-viewers-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
               Monetization Guide
