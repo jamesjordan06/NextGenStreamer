@@ -789,5 +789,37 @@
     "categories": ["Streaming"],
     "priceNote": "Check current price on Amazon",
     "isAffiliate": true
+  },
+  {
+    "asin": "B01LXCDPPK",
+    "slug": "logitech-c922-pro-stream-webcam",
+    "name": "Logitech C922 Pro Stream Webcam",
+    "description": "Professional HD streaming webcam with 720p at 60fps, background removal, and automatic HD light correction. The streamer's choice for smooth motion capture.",
+    "amazonUrl": "https://amzn.to/5I6J7K8",
+    "imageUrl": "https://m.media-amazon.com/images/I/71aY+mfIxiL._AC_SX679_.jpg",
+    "features": [
+      "Full HD 1080p at 30fps or 720p at 60fps",
+      "Autofocus and automatic HD light correction",
+      "Background removal technology with XSplit",
+      "Dual stereo microphones built-in",
+      "Works with OBS, XSplit, Streamlabs",
+      "Includes tabletop tripod for flexible positioning"
+    ],
+    "pros": [
+      "720p at 60fps for smooth streaming",
+      "Enhanced background replacement capabilities",
+      "Includes tabletop tripod",
+      "Optimized for streamers and content creators",
+      "Premium XSplit software bundle"
+    ],
+    "cons": [
+      "Higher price than C920",
+      "Still limited to 30fps at 1080p",
+      "Needs good lighting for best results",
+      "Background removal works best with controlled lighting"
+    ],
+    "categories": ["Webcams"],
+    "priceNote": "Premium pricing for streaming features",
+    "isAffiliate": true
   }
 ] 

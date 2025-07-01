@@ -75,6 +75,15 @@ export default function Navigation() {
                         <div className="text-sm text-gray-600">TikTok, Reels & Shorts</div>
                       </div>
                     </Link>
+                    <Link href="/guides/gaming-headsets-comfort-sound-quality-mic-performance" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">🎧</span>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 group-hover/item:text-purple-600 transition-colors">Gaming Headsets Guide</div>
+                        <div className="text-sm text-gray-600">Comfort, sound & mic performance</div>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -116,6 +125,15 @@ export default function Navigation() {
                       <div>
                         <div className="font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors">Logitech C920 Review</div>
                         <div className="text-sm text-gray-600">King of budget streaming?</div>
+                      </div>
+                    </Link>
+                    <Link href="/guides/logitech-c920-vs-c922-comparison" className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-100 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">⚖️</span>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 group-hover/item:text-red-600 transition-colors">C920 vs C922 Comparison</div>
+                        <div className="text-sm text-gray-600">Definitive webcam guide</div>
                       </div>
                     </Link>
                   </div>
@@ -209,6 +227,10 @@ export default function Navigation() {
                   <div className="font-medium text-gray-900">📱 Vertical Streaming</div>
                   <div className="text-sm text-gray-600">TikTok, Reels & Shorts</div>
                 </Link>
+                <Link href="/guides/gaming-headsets-comfort-sound-quality-mic-performance" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
+                  <div className="font-medium text-gray-900">🎧 Gaming Headsets Guide</div>
+                  <div className="text-sm text-gray-600">Comfort, sound & mic performance</div>
+                </Link>
               </div>
             </div>
 
@@ -229,6 +251,10 @@ export default function Navigation() {
                 <Link href="/guides/logitech-c920-review-worth-it" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
                   <div className="font-medium text-gray-900">📹 Logitech C920 Review</div>
                   <div className="text-sm text-gray-600">King of budget streaming?</div>
+                </Link>
+                <Link href="/guides/logitech-c920-vs-c922-comparison" className="block p-3 rounded-xl hover:bg-white/20 transition-all duration-300" onClick={() => setIsOpen(false)}>
+                  <div className="font-medium text-gray-900">⚖️ C920 vs C922 Comparison</div>
+                  <div className="text-sm text-gray-600">Definitive webcam guide</div>
                 </Link>
               </div>
             </div>
