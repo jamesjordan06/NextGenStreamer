@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
+import GoogleTagManager from './GoogleTagManager'
 
 declare global {
   interface Window {
@@ -39,7 +40,7 @@ export default function CookieBanner() {
 
   return (
     <>
-      {/* Google Analytics - Only load after consent */}
+      {/* Google Analytics & GTM - Only load after consent */}
       {loadGA && (
         <>
           <Script
@@ -55,6 +56,7 @@ export default function CookieBanner() {
               console.log('📊 Google Analytics loaded and tracking');
             `}
           </Script>
+          <GoogleTagManager />
         </>
       )}
 
