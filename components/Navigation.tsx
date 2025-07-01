@@ -154,11 +154,7 @@ export default function Navigation() {
             <div>
               <h3 className="px-3 py-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Guides</h3>
               <div className="mt-1 space-y-1">
-                <MobileNavLink href="/guides/how-to-start-streaming-2025" title="Complete Beginner's Guide" description="Start streaming from zero" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/complete-streaming-setup-2025" title="Complete Setup Guide" description="Equipment & configuration" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/how-to-monetize-streaming-low-viewers-2025" title="Monetization Guide" description="Earn with low viewers" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025" title="Vertical Streaming" description="TikTok, Reels & Shorts" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/gaming-headsets-comfort-sound-quality-mic-performance" title="Gaming Headsets Guide" description="Comfort, sound & mic performance" onClick={() => setIsOpen(false)} />
+                <MobileNavLink href="/guides" title="All Guides" description="Browse all streaming guides" onClick={() => setIsOpen(false)} />
               </div>
             </div>
 
@@ -166,10 +162,7 @@ export default function Navigation() {
             <div>
               <h3 className="px-3 py-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Reviews</h3>
               <div className="mt-1 space-y-1">
-                <MobileNavLink href="/guides/streamlabs-vs-obs-2025" title="Streamlabs vs OBS" description="Software comparison" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/shure-sm7b-review-worth-it" title="Shure SM7B Review" description="Is the legendary mic worth it?" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/logitech-c920-review-worth-it" title="Logitech C920 Review" description="King of budget streaming?" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/guides/logitech-c920-vs-c922-comparison" title="C920 vs C922 Comparison" description="Definitive webcam guide" onClick={() => setIsOpen(false)} />
+                <MobileNavLink href="/reviews" title="All Reviews" description="Browse all product reviews" onClick={() => setIsOpen(false)} />
               </div>
             </div>
 
