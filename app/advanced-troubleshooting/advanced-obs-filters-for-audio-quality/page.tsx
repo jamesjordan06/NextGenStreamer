@@ -207,7 +207,7 @@ export default function AdvancedOBSAudioFiltersPage() {
               <strong>Setting and Forgetting:</strong> Your audio environment or even your voice can change. Periodically review your filter settings, especially if you change microphones, move your setup, or if your room's ambient noise changes (e.g., seasonal AC use).
             </li>
             <li>
-              <strong>Not Using Headphones for Monitoring (or using poor ones):</strong> You cannot accurately judge your audio quality through laptop speakers or cheap earbuds. Invest in a decent pair of closed-back studio headphones for critical listening while setting up filters. OBS allows you to monitor your audio output (Advanced Audio Properties > Audio Monitoring).
+              <strong>Not Using Headphones for Monitoring (or using poor ones):</strong> You cannot accurately judge your audio quality through laptop speakers or cheap earbuds. Invest in a decent pair of closed-back studio headphones for critical listening while setting up filters. OBS allows you to monitor your audio output (Advanced Audio Properties &gt; Audio Monitoring).
             </li>
             <li>
               <strong>Ignoring Gain Staging:</strong> Filters aren't a magic fix for a poor input signal. Ensure your microphone's input level (gain on your audio interface or USB mic) is healthy – loud enough to get a good signal-to-noise ratio, but not so loud that it's clipping *before* it even hits OBS.
