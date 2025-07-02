@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import AmazonProductCard from '../../../components/AmazonProductCard'
+// import AmazonProductCard from '../../../components/AmazonProductCard' // Component will be removed
+import Image from 'next/image'; // For displaying product images
 import AffiliateDisclaimer from '../../../components/AffiliateDisclaimer'
-import { getProductByAsin } from '../../../lib/products'
+import { getProductByAsin } from '../../../lib/products' // Assuming this still fetches data we need
 
 export const metadata: Metadata = {
   title: 'Logitech C920 Webcam Review: The King of Budget Streaming? (For New Streamers!) | NextGenStreamer',
@@ -73,8 +74,26 @@ export default function LogitechC920ReviewPage() {
           </div>
 
           {logitechC920 && (
-            <div className="my-8">
-              <AmazonProductCard product={logitechC920} />
+            <div className="my-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">{logitechC920.name}</h3>
+              {logitechC920.imageUrl && (
+                <div className="w-full max-w-xs mx-auto h-48 relative overflow-hidden mb-4 rounded">
+                  <Image src={logitechC920.imageUrl} alt={logitechC920.name} fill style={{ objectFit: 'contain' }} className="p-2" />
+                </div>
+              )}
+              <p className="text-sm text-gray-600 mb-4 text-center">{logitechC920.description}</p>
+              {logitechC920.amazonUrl && (
+                <div className="text-center">
+                  <a
+                    href={logitechC920.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-block bg-brand-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-brand-primary-hover transition-colors text-base"
+                  >
+                    Check Price on Amazon
+                  </a>
+                </div>
+              )}
             </div>
           )}
 

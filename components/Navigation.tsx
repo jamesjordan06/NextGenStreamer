@@ -77,22 +77,6 @@ export default function Navigation() {
               Advanced {/* Shortened for brevity in desktop nav if needed */}
             </Link>
 
-            {/* Products Dropdown */}
-            <div className="relative group">
-              <button className={dropdownButtonClasses}>
-                <span>Products</span>
-                <ChevronDownIcon className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-72 bg-brand-light border border-border-neutral rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
-                <div className="p-4">
-                  <div className="grid gap-2">
-                    <DropdownLink href="/products" title="All Products" description="Browse recommended gear" />
-                    <DropdownLink href="/gear-hardware/best-microphones-2025" title="Best Microphones" description="Top mic recommendations" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <Link href="/about" className={navLinkClasses + " hover:scale-100"}>
               About
             </Link>
@@ -128,15 +112,6 @@ export default function Navigation() {
             <MobileNavLink href="/software-tools" title="Software & Tools" onClick={() => setIsOpen(false)} description="Master your streaming software."/>
             <MobileNavLink href="/growth-monetization" title="Growth & Monetization" onClick={() => setIsOpen(false)} description="Grow your audience and earn."/>
             <MobileNavLink href="/advanced-troubleshooting" title="Advanced & Troubleshooting" onClick={() => setIsOpen(false)} description="Solve issues & optimize your setup."/>
-
-            {/* Mobile Products Section */}
-            <div className="pt-1 border-t border-border-neutral-light mt-1"> {/* Tighter spacing */}
-              <h3 className="px-3 pt-2 pb-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Products</h3>
-              <div className="space-y-1">
-                <MobileNavLink href="/products" title="All Products" description="Browse recommended gear" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/gear-hardware/best-microphones-2025" title="Best Microphones" description="Top mic recommendations" onClick={() => setIsOpen(false)} />
-              </div>
-            </div>
 
             <div className="border-t border-border-neutral-light pt-1 mt-1"> {/* Tighter spacing */}
                 <MobileNavLink href="/about" title="About" onClick={() => setIsOpen(false)} />

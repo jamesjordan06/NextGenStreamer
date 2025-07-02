@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import AmazonProductCard from '../../../components/AmazonProductCard'
+// import AmazonProductCard from '../../../components/AmazonProductCard' // Component will be removed
+import Image from 'next/image'; // For displaying product images
 import AffiliateDisclaimer from '../../../components/AffiliateDisclaimer'
-import { getProductByAsin } from '../../../lib/products'
+import { getProductByAsin } from '../../../lib/products' // Assuming this still fetches data we need
 
 export const metadata: Metadata = {
   title: 'Headphones vs Earbuds for Gaming & Streaming 2025 | NextGenStreamer',
@@ -118,8 +119,42 @@ export default function HeadphonesVsEarbudsPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {athHeadphones && <AmazonProductCard product={athHeadphones} />}
-              {logitechProX2 && <AmazonProductCard product={logitechProX2} />}
+              {athHeadphones && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {athHeadphones.imageUrl && (
+                    <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={athHeadphones.imageUrl} alt={athHeadphones.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={athHeadphones.name}>{athHeadphones.name}</h4>
+                    {/* <p className="text-xs text-gray-500 mb-2 line-clamp-2 flex-grow">{athHeadphones.description}</p> */}
+                    {athHeadphones.amazonUrl && (
+                      <a href={athHeadphones.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+              {logitechProX2 && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {logitechProX2.imageUrl && (
+                     <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={logitechProX2.imageUrl} alt={logitechProX2.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={logitechProX2.name}>{logitechProX2.name}</h4>
+                    {/* <p className="text-xs text-gray-500 mb-2 line-clamp-2 flex-grow">{logitechProX2.description}</p> */}
+                    {logitechProX2.amazonUrl && (
+                      <a href={logitechProX2.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="bg-blue-50 rounded-xl p-6">
@@ -170,7 +205,24 @@ export default function HeadphonesVsEarbudsPage() {
             </p>
 
             <div className="max-w-md mx-auto mb-8">
-              {steelSeriesGameBuds && <AmazonProductCard product={steelSeriesGameBuds} />}
+              {steelSeriesGameBuds && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {steelSeriesGameBuds.imageUrl && (
+                    <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={steelSeriesGameBuds.imageUrl} alt={steelSeriesGameBuds.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={steelSeriesGameBuds.name}>{steelSeriesGameBuds.name}</h4>
+                    {/* <p className="text-xs text-gray-500 mb-2 line-clamp-2 flex-grow">{steelSeriesGameBuds.description}</p> */}
+                    {steelSeriesGameBuds.amazonUrl && (
+                      <a href={steelSeriesGameBuds.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="bg-purple-50 rounded-xl p-6">

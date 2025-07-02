@@ -1,7 +1,9 @@
-import AmazonProductCard from '@/components/AmazonProductCard'
-import AmazonCTAButton from '@/components/AmazonCTAButton'
+// import AmazonProductCard from '@/components/AmazonProductCard' // Component will be removed
+// import AmazonCTAButton from '@/components/AmazonCTAButton' // Component will be removed
+import Image from 'next/image'; // For displaying product images
+import Link from 'next/link'; // For links (though not used for product links in this refactor)
 import AffiliateDisclaimer from '@/components/AffiliateDisclaimer'
-import { getProductByAsin } from '@/lib/products'
+import { getProductByAsin } from '@/lib/products' // Assuming this still fetches data we need
 
 export const metadata = {
   title: 'How to Stream Vertical (9:16) for TikTok, Reels & YouTube Shorts 2025 - NextGenStreamer',
@@ -198,8 +200,26 @@ export default function VerticalStreamingGuide() {
         {/* Product Showcase */}
         <div className="my-16">
           {webcam && (
-            <div className="mt-20">
-              <AmazonProductCard product={webcam} />
+            <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">{webcam.name}</h3>
+              {webcam.imageUrl && (
+                <div className="w-full max-w-xs mx-auto h-48 relative overflow-hidden mb-4 rounded">
+                  <Image src={webcam.imageUrl} alt={webcam.name} fill style={{ objectFit: 'contain' }} className="p-2" />
+                </div>
+              )}
+              <p className="text-sm text-gray-600 mb-4 text-center">{webcam.description}</p>
+              {webcam.amazonUrl && (
+                <div className="text-center">
+                  <a
+                    href={webcam.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-block bg-brand-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-brand-primary-hover transition-colors text-base"
+                  >
+                    Check Price on Amazon
+                  </a>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -389,8 +409,26 @@ export default function VerticalStreamingGuide() {
         {/* Product Showcase */}
         <div className="my-16">
           {ringLight && (
-            <div className="mt-20">
-              <AmazonProductCard product={ringLight} />
+            <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">{ringLight.name}</h3>
+              {ringLight.imageUrl && (
+                <div className="w-full max-w-xs mx-auto h-48 relative overflow-hidden mb-4 rounded">
+                  <Image src={ringLight.imageUrl} alt={ringLight.name} fill style={{ objectFit: 'contain' }} className="p-2" />
+                </div>
+              )}
+              <p className="text-sm text-gray-600 mb-4 text-center">{ringLight.description}</p>
+              {ringLight.amazonUrl && (
+                <div className="text-center">
+                  <a
+                    href={ringLight.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-block bg-brand-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-brand-primary-hover transition-colors text-base"
+                  >
+                    Check Price on Amazon
+                  </a>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -580,8 +618,26 @@ export default function VerticalStreamingGuide() {
         {/* Product Showcase */}
         <div className="my-16">
           {streamDeck && (
-            <div className="mt-20">
-              <AmazonProductCard product={streamDeck} />
+            <div className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">{streamDeck.name}</h3>
+              {streamDeck.imageUrl && (
+                <div className="w-full max-w-xs mx-auto h-48 relative overflow-hidden mb-4 rounded">
+                  <Image src={streamDeck.imageUrl} alt={streamDeck.name} fill style={{ objectFit: 'contain' }} className="p-2" />
+                </div>
+              )}
+              <p className="text-sm text-gray-600 mb-4 text-center">{streamDeck.description}</p>
+              {streamDeck.amazonUrl && (
+                <div className="text-center">
+                  <a
+                    href={streamDeck.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-block bg-brand-primary text-white font-semibold py-2 px-6 rounded-md hover:bg-brand-primary-hover transition-colors text-base"
+                  >
+                    Check Price on Amazon
+                  </a>
+                </div>
+              )}
             </div>
           )}
         </div>
