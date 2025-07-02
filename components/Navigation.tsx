@@ -91,7 +91,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}
             className="md:hidden p-2 rounded-md text-text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-primary transition-colors"
             aria-label="Toggle menu"
           >
