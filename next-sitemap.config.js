@@ -45,79 +45,28 @@ module.exports = {
       priority: 0.5,
       lastmod: new Date().toISOString(),
     })
+
+    // Add new category index pages
+    const newCategories = [
+      '/getting-started',
+      '/gear-hardware',
+      '/software-tools',
+      '/growth-monetization',
+      '/advanced-troubleshooting',
+    ];
+
+    newCategories.forEach(categoryPath => {
+      result.push({
+        loc: categoryPath,
+        changefreq: 'weekly',
+        priority: 0.8, // Category pages are important
+        lastmod: new Date().toISOString(),
+      });
+    });
     
-    // All Guide Pages
-    result.push({
-      loc: '/guides/how-to-start-streaming-2025',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/complete-streaming-setup-2025',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/streamlabs-vs-obs-2025',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/how-to-monetize-streaming-low-viewers-2025',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/xlr-vs-usb-microphones-2025',
-      changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/headphones-vs-earbuds-2025',
-      changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    })
-    
-    // Review Pages
-    result.push({
-      loc: '/guides/shure-sm7b-review-worth-it',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    result.push({
-      loc: '/guides/logitech-c920-review-worth-it',
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-    })
-    
-    // Product Lists
-    result.push({
-      loc: '/lists/best-microphones-2025',
-      changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    })
+    // Individual articles will be auto-discovered by next-sitemap
+    // from the app directory structure.
+    // The old /guides/ and /lists/ specific entries are removed.
     
     return result
   },

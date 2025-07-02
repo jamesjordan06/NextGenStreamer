@@ -79,17 +79,17 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/guides/complete-streaming-setup-2025" className="text-gray-300 hover:text-brand-light transition-colors">
+                <Link href="/gear-hardware/complete-streaming-setup-2025" className="text-gray-300 hover:text-brand-light transition-colors">
                   Setup Guide
                 </Link>
               </li>
               <li>
-                <Link href="/guides/xlr-vs-usb-microphones-2025" className="text-gray-300 hover:text-brand-light transition-colors">
+                <Link href="/gear-hardware/xlr-vs-usb-microphones-2025" className="text-gray-300 hover:text-brand-light transition-colors">
                   Microphone Guide
                 </Link>
               </li>
               <li>
-                <Link href="/guides/headphones-vs-earbuds-2025" className="text-gray-300 hover:text-brand-light transition-colors">
+                <Link href="/gear-hardware/headphones-vs-earbuds-2025" className="text-gray-300 hover:text-brand-light transition-colors">
                   Audio Guide
                 </Link>
               </li>

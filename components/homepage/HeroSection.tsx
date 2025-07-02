@@ -20,10 +20,10 @@ export default function HeroSection() {
             </p>
           </div>
           <div className="fade-in-up stagger-2 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Link href="/guides/how-to-start-streaming-2025" className={`${primaryButtonClasses}`}>
+            <Link href="/getting-started/how-to-start-streaming-2025" className={`${primaryButtonClasses}`}>
               Explore Our Guides
             </Link>
-            <Link href="/guides/complete-streaming-setup-2025" className={lightOutlineButtonClasses}>
+            <Link href="/gear-hardware/complete-streaming-setup-2025" className={lightOutlineButtonClasses}>
               Gear Up: Setup Guide
             </Link>
           </div>

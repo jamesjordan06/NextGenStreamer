@@ -28,7 +28,7 @@ export default function FeaturedGuidesSection() {
             <p className="text-text-secondary text-sm mb-4 flex-grow">
               New to streaming? We'll take you from zero to hero, covering platforms, audience growth, and how to start earning.
             </p>
-            <Link href="/guides/how-to-start-streaming-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
+            <Link href="/getting-started/how-to-start-streaming-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
               Begin Your Adventure <ArrowRightIcon className="w-4 h-4 ml-1.5" />
             </Link>
           </div>
@@ -40,7 +40,7 @@ export default function FeaturedGuidesSection() {
             <p className="text-text-secondary text-sm mb-4 flex-grow">
               Build a killer stream setup on any budget ($300-$1600+). Get our top gear picks, setup tips, and troubleshooting steps.
             </p>
-            <Link href="/guides/complete-streaming-setup-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
+            <Link href="/gear-hardware/complete-streaming-setup-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
               Build Your Setup <ArrowRightIcon className="w-4 h-4 ml-1.5" />
             </Link>
           </div>
@@ -52,7 +52,7 @@ export default function FeaturedGuidesSection() {
             <p className="text-text-secondary text-sm mb-4 flex-grow">
               The ultimate Streamlabs vs. OBS showdown. We break down features, performance, and who wins for *your* streaming style.
             </p>
-            <Link href="/guides/streamlabs-vs-obs-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
+            <Link href="/software-tools/streamlabs-vs-obs-2025" className={`${secondaryButtonClasses} text-sm w-full mt-auto`}>
               Compare Software <ArrowRightIcon className="w-4 h-4 ml-1.5" />
             </Link>
           </div>
@@ -61,16 +61,16 @@ export default function FeaturedGuidesSection() {
         <div className="text-center">
           <p className="text-text-secondary mb-6 text-base sm:text-lg">Ready for more? Dive into guides on making money, streaming to TikTok, choosing mics, and other advanced tips.</p>
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
-            <Link href="/guides/how-to-monetize-streaming-low-viewers-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
+            <Link href="/growth-monetization/how-to-monetize-streaming-low-viewers-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
               Monetization Guide
             </Link>
-            <Link href="/guides/xlr-vs-usb-microphones-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
+            <Link href="/gear-hardware/xlr-vs-usb-microphones-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
               XLR vs USB Mics
             </Link>
-            <Link href="/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
+            <Link href="/software-tools/how-to-stream-vertical-916-tiktok-reels-shorts-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
               Vertical Streaming
             </Link>
-            <Link href="/guides/headphones-vs-earbuds-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
+            <Link href="/gear-hardware/headphones-vs-earbuds-2025" className={`${secondaryButtonClasses} text-sm py-2 px-4`}>
               Audio Equipment
             </Link>
           </div>
