@@ -63,30 +63,8 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-2724823807720042" />
 
         {/* AdSense SCRIPT REMOVED FROM HERE */}
-        <Script
-          src="https://cmp.gatekeeperconsent.com/min.js"
-          strategy="afterInteractive"
-          data-cfasync="false"
-        />
-        <Script
-          src="https://the.gatekeeperconsent.com/cmp.min.js"
-          strategy="afterInteractive"
-          data-cfasync="false"
-        />
-        <Script
-          src="//www.ezojs.com/ezoic/sa.min.js"
-          strategy="afterInteractive"
-          async
-        />
-        <Script id="ezstandalone-init" strategy="afterInteractive">
-          {`
-            window.ezstandalone = window.ezstandalone || {};
-            ezstandalone.cmd = ezstandalone.cmd || [];
-          `}
-        </Script>
       </head>
       <body className={inter.className}>
-        <GoogleAnalytics />
         <Navigation />
         <main className="min-h-screen">
           {children}

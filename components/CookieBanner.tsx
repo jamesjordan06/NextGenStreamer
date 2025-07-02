@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
 import GoogleTagManager from './GoogleTagManager'
+import GoogleAnalytics from './GoogleAnalytics'
 
 declare global {
   interface Window {
@@ -66,6 +67,7 @@ export default function CookieBanner() {
             `}
           </Script>
 
+          <GoogleAnalytics />
           <GoogleTagManager />
 
           <Script
