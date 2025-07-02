@@ -62,13 +62,7 @@ export default function RootLayout({
         {/* ✅ Google AdSense Meta Tag for Instant Verification */}
         <meta name="google-adsense-account" content="ca-pub-2724823807720042" />
 
-        {/* ✅ Google AdSense Script to Enable Ads */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042"
-          strategy="afterInteractive"
-          async
-          crossOrigin="anonymous"
-        />
+        {/* AdSense SCRIPT REMOVED FROM HERE */}
         <Script
           src="https://cmp.gatekeeperconsent.com/min.js"
           strategy="afterInteractive"

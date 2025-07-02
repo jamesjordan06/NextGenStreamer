@@ -9,73 +9,97 @@ declare global {
   interface Window {
     gtag: (...args: any[]) => void
     dataLayer: any[]
+    adsbygoogle?: object[]
   }
 }
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
-  const [loadGA, setLoadGA] = useState(false)
+  const [consentGiven, setConsentGiven] = useState(false)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent')
     if (consent === null) {
       setShowBanner(true)
     } else if (consent === 'accepted') {
-      setLoadGA(true)
+      setConsentGiven(true)
     }
   }, [])
 
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted')
     setShowBanner(false)
-    setLoadGA(true)
-    console.log('✅ Cookies accepted - Google Analytics loading')
+    setConsentGiven(true)
+    console.log('✅ Cookies accepted - Analytics, GTM & Ads loading')
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({ event: 'consent_given' })
+    }
   }
 
   const handleReject = () => {
     localStorage.setItem('cookie-consent', 'rejected')
     setShowBanner(false)
-    console.log('❌ Cookies rejected - No tracking')
+    setConsentGiven(false)
+    console.log('❌ Cookies rejected - No tracking, GTM or ads')
   }
 
   return (
     <>
-      {/* Google Analytics & GTM - Only load after consent */}
-      {loadGA && (
+      {consentGiven && (
         <>
           <Script
+            id="gtag-script"
             src="https://www.googletagmanager.com/gtag/js?id=G-P9TMPE87N7"
             strategy="afterInteractive"
+            onLoad={() => console.log('📊 Google Analytics gtag.js loaded')}
+            onError={(e) =>
+              console.error('Google Analytics gtag.js script failed to load:', e)
+            }
           />
-          <Script id="google-analytics" strategy="afterInteractive">
+          <Script id="google-analytics-init" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-P9TMPE87N7');
-              console.log('📊 Google Analytics loaded and tracking');
+              console.log('📊 Google Analytics configured');
             `}
           </Script>
+
           <GoogleTagManager />
+
+          <Script
+            id="adsense-script"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042"
+            strategy="afterInteractive"
+            async
+            crossOrigin="anonymous"
+            onLoad={() => {
+              console.log('📰 AdSense script loaded successfully')
+              try {
+                ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+              } catch (e) {
+                console.error('Error pushing to adsbygoogle:', e)
+              }
+            }}
+            onError={(e) => console.error('AdSense script failed to load:', e)}
+          />
         </>
       )}
 
-      {/* Cookie Banner */}
       {showBanner && (
-        <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 border-t border-gray-700">
+        <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-[100] border-t border-gray-700">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div className="flex-1">
                 <h3 className="font-semibold mb-2">🍪 We Use Cookies & Analytics</h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  We use Google Analytics to improve your experience and measure performance. 
-                  Analytics will only be enabled if you accept cookies.{' '}
+                  We use cookies and similar technologies for analytics and advertising. By clicking "Accept All", you consent to their use. {' '}
                   <Link href="/legal/privacy" className="text-blue-400 hover:text-blue-300 underline">
                     Learn more in our Privacy Policy
                   </Link>
                 </p>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-2 min-w-fit">
                 <button
                   onClick={handleReject}
@@ -96,4 +120,4 @@ export default function CookieBanner() {
       )}
     </>
   )
-} 
+}
