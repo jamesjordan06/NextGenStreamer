@@ -73,17 +73,6 @@ export default function CookieBanner() {
 
       {/* Cookie Banner */}
       {showBanner && (
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-P9TMPE87N7');
-              console.log('📊 Google Analytics loaded and tracking');
-            `}
-          </Script>
-        </>
-      )}
-
-      {/* Cookie Banner */}
-      {showBanner && (
         <div className="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 border-t border-gray-700">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
