@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import AmazonProductCard from '@/components/AmazonProductCard'
+// import AmazonProductCard from '@/components/AmazonProductCard' // Removed as component is deleted
 import HeroSection from '@/components/homepage/HeroSection' // Import the new HeroSection component
 import FeaturedGuidesSection from '@/components/homepage/FeaturedGuidesSection'; // Correctly import FeaturedGuidesSection
 import WhyLearnWithUsSection from '@/components/homepage/WhyLearnWithUsSection';
