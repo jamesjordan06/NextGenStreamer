@@ -13,13 +13,6 @@ const DropdownLink = ({ href, title, description }: { href: string, title: strin
   </Link>
 );
 
-// Simplified Helper component for mobile menu links (without description)
-const SimpleMobileLink = ({ href, title, onClick }: { href: string, title: string, onClick: () => void }) => (
-  <Link href={href} className="block p-3 rounded-md hover:bg-gray-100 text-text-primary font-medium transition-colors duration-150" onClick={onClick}>
-    {title}
-  </Link>
-);
-
 // Mobile navigation link that can optionally show a description
 const MobileNavLink = ({
   href,
@@ -67,43 +60,22 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6"> {/* Adjusted space */}
-            {/* Guides Dropdown */}
-            <div className="relative group">
-              <button className={dropdownButtonClasses}>
-                <span>Guides</span>
-                <ChevronDownIcon className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-brand-light border border-border-neutral rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
-                <div className="p-4"> {/* Reduced padding */}
-                  <div className="grid gap-2"> {/* Reduced gap */}
-                    <DropdownLink href="/guides/how-to-start-streaming-2025" title="Complete Beginner's Guide" description="Start streaming from zero" />
-                    <DropdownLink href="/guides/complete-streaming-setup-2025" title="Complete Setup Guide" description="Equipment & configuration" />
-                    <DropdownLink href="/guides/how-to-monetize-streaming-low-viewers-2025" title="Monetization Guide" description="Earn with low viewers" />
-                    <DropdownLink href="/guides/how-to-stream-vertical-916-tiktok-reels-shorts-2025" title="Vertical Streaming" description="TikTok, Reels & Shorts" />
-                    <DropdownLink href="/guides/gaming-headsets-comfort-sound-quality-mic-performance" title="Gaming Headsets Guide" description="Comfort, sound & mic performance" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Reviews Dropdown */}
-            <div className="relative group">
-              <button className={dropdownButtonClasses}>
-                <span>Reviews</span>
-                <ChevronDownIcon className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-brand-light border border-border-neutral rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
-                <div className="p-4">
-                  <div className="grid gap-2">
-                    <DropdownLink href="/guides/streamlabs-vs-obs-2025" title="Streamlabs vs OBS" description="Software comparison" />
-                    <DropdownLink href="/guides/shure-sm7b-review-worth-it" title="Shure SM7B Review" description="Is the legendary mic worth it?" />
-                    <DropdownLink href="/guides/logitech-c920-review-worth-it" title="Logitech C920 Review" description="King of budget streaming?" />
-                    <DropdownLink href="/guides/logitech-c920-vs-c922-comparison" title="C920 vs C922 Comparison" description="Definitive webcam guide" />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4"> {/* Adjusted space for more items */}
+            <Link href="/getting-started" className={navLinkClasses}>
+              Getting Started
+            </Link>
+            <Link href="/gear-hardware" className={navLinkClasses}>
+              Gear & Hardware
+            </Link>
+            <Link href="/software-tools" className={navLinkClasses}>
+              Software & Tools
+            </Link>
+            <Link href="/growth-monetization" className={navLinkClasses}>
+              Growth & Monetization
+            </Link>
+            <Link href="/advanced-troubleshooting" className={navLinkClasses}>
+              Advanced {/* Shortened for brevity in desktop nav if needed */}
+            </Link>
 
             {/* Products Dropdown */}
             <div className="relative group">
@@ -115,21 +87,21 @@ export default function Navigation() {
                 <div className="p-4">
                   <div className="grid gap-2">
                     <DropdownLink href="/products" title="All Products" description="Browse recommended gear" />
-                    <DropdownLink href="/lists/best-microphones-2025" title="Best Microphones" description="Top mic recommendations" />
+                    <DropdownLink href="/gear-hardware/best-microphones-2025" title="Best Microphones" description="Top mic recommendations" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <Link href="/about" className={navLinkClasses + " hover:scale-100"}> {/* Removed hover:scale-105 for consistency */}
+            <Link href="/about" className={navLinkClasses + " hover:scale-100"}>
               About
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/guides/how-to-start-streaming-2025" className={ctaButtonClasses}>
-              View Guides
+            <Link href="/getting-started" className={ctaButtonClasses}>
+              Get Started
             </Link>
           </div>
 
@@ -148,41 +120,31 @@ export default function Navigation() {
         </div>
 
         {/* Mobile menu */}
-        <div className={`md:hidden transition-all ease-in-out duration-300 overflow-hidden ${isOpen ? 'max-h-[calc(100vh-60px)] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}> {/* Adjusted max-h for better screen fit */}
-          <div className="space-y-4 pt-2 pb-3 border-t border-border-neutral-light">
-            {/* Mobile Guides Section */}
-            <div>
-              <h3 className="px-3 py-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Guides</h3>
-              <div className="mt-1 space-y-1">
-                <MobileNavLink href="/guides" title="All Guides" description="Browse all streaming guides" onClick={() => setIsOpen(false)} />
-              </div>
-            </div>
+        <div className={`md:hidden transition-all ease-in-out duration-300 overflow-hidden ${isOpen ? 'max-h-[calc(100vh-70px)] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}> {/* Adjusted max-h for potentially more items and padding */}
+          <div className="space-y-1 pt-2 pb-3 border-t border-border-neutral-light"> {/* Reduced space-y for tighter packing */}
 
-            {/* Mobile Reviews Section */}
-            <div>
-              <h3 className="px-3 py-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Reviews</h3>
-              <div className="mt-1 space-y-1">
-                <MobileNavLink href="/reviews" title="All Reviews" description="Browse all product reviews" onClick={() => setIsOpen(false)} />
-              </div>
-            </div>
+            <MobileNavLink href="/getting-started" title="Getting Started" onClick={() => setIsOpen(false)} description="New to streaming? Start here!"/>
+            <MobileNavLink href="/gear-hardware" title="Gear & Hardware" onClick={() => setIsOpen(false)} description="Find the best equipment."/>
+            <MobileNavLink href="/software-tools" title="Software & Tools" onClick={() => setIsOpen(false)} description="Master your streaming software."/>
+            <MobileNavLink href="/growth-monetization" title="Growth & Monetization" onClick={() => setIsOpen(false)} description="Grow your audience and earn."/>
+            <MobileNavLink href="/advanced-troubleshooting" title="Advanced & Troubleshooting" onClick={() => setIsOpen(false)} description="Solve issues & optimize your setup."/>
 
             {/* Mobile Products Section */}
-            <div>
-              <h3 className="px-3 py-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Products</h3>
-              <div className="mt-1 space-y-1">
+            <div className="pt-1 border-t border-border-neutral-light mt-1"> {/* Tighter spacing */}
+              <h3 className="px-3 pt-2 pb-1 text-xs font-semibold text-text-secondary uppercase tracking-wider">Products</h3>
+              <div className="space-y-1">
                 <MobileNavLink href="/products" title="All Products" description="Browse recommended gear" onClick={() => setIsOpen(false)} />
-                <MobileNavLink href="/lists/best-microphones-2025" title="Best Microphones" description="Top mic recommendations" onClick={() => setIsOpen(false)} />
+                <MobileNavLink href="/gear-hardware/best-microphones-2025" title="Best Microphones" description="Top mic recommendations" onClick={() => setIsOpen(false)} />
               </div>
             </div>
 
-            <div className="border-t border-border-neutral-light pt-4 mt-4">
+            <div className="border-t border-border-neutral-light pt-1 mt-1"> {/* Tighter spacing */}
                 <MobileNavLink href="/about" title="About" onClick={() => setIsOpen(false)} />
             </div>
 
-
-            <div className="px-3 pt-4">
-              <Link href="/guides/how-to-start-streaming-2025" className={`${ctaButtonClasses} block text-center w-full`} onClick={() => setIsOpen(false)}>
-                View Guides
+            <div className="px-3 pt-3"> {/* Adjusted padding */}
+              <Link href="/getting-started" className={`${ctaButtonClasses} block text-center w-full`} onClick={() => setIsOpen(false)}>
+                Get Started
               </Link>
             </div>
           </div>

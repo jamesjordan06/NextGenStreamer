@@ -19,7 +19,7 @@ export default function FinalCTASection() {
             Thousands of creators, from first-timers to full-time pros, have launched their channels with our help. Your journey to a better stream begins now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Link href="/guides/how-to-start-streaming-2025" className={primaryWhiteButtonClasses}>
+            <Link href="/getting-started/how-to-start-streaming-2025" className={primaryWhiteButtonClasses}>
               Jump Into Our Free Guides
             </Link>
             <a
@@ -30,7 +30,7 @@ export default function FinalCTASection() {
             >
               Get Streamlabs Free
             </a>
-            <Link href="/guides/complete-streaming-setup-2025" className={lightOutlineButtonClasses}>
+            <Link href="/gear-hardware/complete-streaming-setup-2025" className={lightOutlineButtonClasses}>
               Find Your Perfect Gear
             </Link>
           </div>
