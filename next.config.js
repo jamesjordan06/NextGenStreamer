@@ -44,6 +44,15 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react']
   },
+  async redirects() {
+    return [
+      {
+        source: '/ads.txt',
+        destination: 'https://srv.adstxtmanager.com/19390/nextgenstreamer.com',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
