@@ -62,13 +62,7 @@ export default function RootLayout({
         {/* ✅ Google AdSense Meta Tag for Instant Verification */}
         <meta name="google-adsense-account" content="ca-pub-2724823807720042" />
 
-        {/* ✅ Google AdSense Script to Enable Ads */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042"
-          strategy="afterInteractive"
-          async
-          crossOrigin="anonymous"
-        />
+        {/* 🚨 AdSense Script moved to CookieBanner to be loaded conditionally after consent */}
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />

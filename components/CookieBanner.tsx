@@ -55,6 +55,30 @@ export default function CookieBanner() {
               console.log('📊 Google Analytics loaded and tracking');
             `}
           </Script>
+          {/* ✅ Google AdSense Script to Enable Ads - Loaded Conditionally */}
+          <Script
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2724823807720042"
+            strategy="afterInteractive"
+            async
+            crossOrigin="anonymous"
+            onError={(e) => {
+              console.error('AdSense script failed to load:', e)
+            }}
+            onLoad={() => {
+              console.log('📰 AdSense script loaded successfully')
+            }}
+          />
+        </>
+      )}
+
+      {/* Cookie Banner */}
+      {showBanner && (
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-P9TMPE87N7');
+              console.log('📊 Google Analytics loaded and tracking');
+            `}
+          </Script>
         </>
       )}
 
