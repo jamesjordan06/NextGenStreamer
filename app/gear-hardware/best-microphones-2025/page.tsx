@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
-import AmazonProductCard from '@/components/AmazonProductCard'
-import { getProductsByCategory } from '@/lib/products'
+// import AmazonProductCard from '@/components/AmazonProductCard' // Component will be removed
+import Image from 'next/image'; // For displaying product images
+import Link from 'next/link'; // For links
+import { getProductsByCategory } from '@/lib/products' // Assuming this still fetches data we need like name, image, url, description
 
 export const metadata: Metadata = {
   title: 'Best Microphones for Creators 2025 - Complete Buying Guide',
@@ -104,7 +106,39 @@ export default function BestMicrophonesPage() {
                       </span>
                     </div>
                   )}
-                  <AmazonProductCard product={microphone} />
+                  {/* BEGIN REPLACEMENT FOR AmazonProductCard */}
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-xl transition-shadow duration-200">
+                    {microphone.imageUrl && (
+                      <div className="w-full h-48 relative overflow-hidden">
+                        <Image
+                          src={microphone.imageUrl}
+                          alt={microphone.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="p-4"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2 truncate" title={microphone.name}>
+                        {microphone.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
+                        {microphone.description}
+                      </p>
+                      {microphone.amazonUrl && (
+                        <a
+                          href={microphone.amazonUrl}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-brand-primary-hover transition-colors text-sm"
+                        >
+                          Check Price on Amazon
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  {/* END REPLACEMENT FOR AmazonProductCard */}
                 </div>
               ))
             }
@@ -134,7 +168,39 @@ export default function BestMicrophonesPage() {
                       </span>
                     </div>
                   )}
-                  <AmazonProductCard product={microphone} />
+                  {/* BEGIN REPLACEMENT FOR AmazonProductCard */}
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-xl transition-shadow duration-200">
+                    {microphone.imageUrl && (
+                       <div className="w-full h-48 relative overflow-hidden">
+                        <Image
+                          src={microphone.imageUrl}
+                          alt={microphone.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="p-4"
+                        />
+                      </div>
+                    )}
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h3 className="text-xl font-semibold text-gray-800 mb-2 truncate" title={microphone.name}>
+                        {microphone.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
+                        {microphone.description}
+                      </p>
+                      {microphone.amazonUrl && (
+                        <a
+                          href={microphone.amazonUrl}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-4 rounded-md hover:bg-brand-primary-hover transition-colors text-sm"
+                        >
+                          Check Price on Amazon
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  {/* END REPLACEMENT FOR AmazonProductCard */}
                 </div>
               ))
             }

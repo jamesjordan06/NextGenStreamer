@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import AmazonProductCard from '@/components/AmazonProductCard';
-import { getFeaturedProducts } from '@/lib/products'; // Assuming this path is correct from the new component's location
+// import AmazonProductCard from '@/components/AmazonProductCard'; // Component will be removed
+import Image from 'next/image'; // For displaying product images
+import { getFeaturedProducts } from '@/lib/products'; // Assuming this path is correct and still useful
 import { Product } from '@/types/product'; // Assuming this path is correct
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 
@@ -25,15 +26,39 @@ export default function RecommendedEquipmentSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
           {featuredProducts.slice(0, 6).map((product, index) => (
-            <div key={product.slug} className={`fade-in-up ${index === 1 ? 'stagger-1' : index === 2 ? 'stagger-2' : ''}`}>
-              <AmazonProductCard product={product} /> {/* This component is already refactored */}
+            <div key={product.slug} className={`fade-in-up ${index === 1 ? 'stagger-1' : index === 2 ? 'stagger-2' : ''} bg-white rounded-lg shadow-md p-4 border border-gray-200 hover:shadow-lg transition-shadow duration-200`}>
+              {product.imageUrl && (
+                <div className="w-full h-40 relative overflow-hidden mb-3 rounded">
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="p-2"
+                  />
+                </div>
+              )}
+              <h3 className="text-md font-semibold text-gray-800 mb-1 truncate" title={product.name}>
+                {product.name}
+              </h3>
+              {product.amazonUrl && (
+                <a
+                  href={product.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="text-sm text-brand-primary hover:text-brand-primary-hover hover:underline"
+                >
+                  View on Amazon <ArrowRightIcon className="w-4 h-4 inline-block ml-1" />
+                </a>
+              )}
             </div>
           ))}
         </div>
 
+        {/* Link to a relevant gear guide category page instead of /products */}
         <div className="text-center">
-          <Link href="/products" className={`${primaryButtonClasses} text-base`}>
-            Browse All Recommended Gear <ArrowRightIcon className="w-5 h-5 ml-2" />
+          <Link href="/gear-hardware" className={`${primaryButtonClasses} text-base`}>
+            Explore All Gear Guides <ArrowRightIcon className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>

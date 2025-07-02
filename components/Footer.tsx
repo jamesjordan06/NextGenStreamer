@@ -22,53 +22,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Product Categories */}
-          <div>
-            <h3 className="font-heading font-semibold text-text-on-dark mb-4">Product Categories</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/products" className="text-gray-300 hover:text-brand-light transition-colors">
-                  All Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=microphones" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Microphones
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=webcams" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Webcams
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=monitors" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Monitors
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=lighting" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Lighting
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=streaming" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Streaming
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=audio" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Audio
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=productivity" className="text-gray-300 hover:text-brand-light transition-colors">
-                  Productivity
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Software & Tools */}
           <div>
             <h3 className="font-heading font-semibold text-text-on-dark mb-4">Software & Tools</h3>

@@ -25,12 +25,7 @@ module.exports = {
       lastmod: new Date().toISOString(),
     })
     
-    result.push({
-      loc: '/products',
-      changefreq: 'weekly', 
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    })
+    // Removed /products page entry
     
     result.push({
       loc: '/legal/privacy',

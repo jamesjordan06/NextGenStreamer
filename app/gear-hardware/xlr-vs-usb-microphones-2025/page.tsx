@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import AmazonProductCard from '../../../components/AmazonProductCard'
+// import AmazonProductCard from '../../../components/AmazonProductCard' // Component will be removed
+import Image from 'next/image'; // For displaying product images
 import AffiliateDisclaimer from '../../../components/AffiliateDisclaimer'
-import { getProductByAsin } from '../../../lib/products'
+import { getProductByAsin } from '../../../lib/products' // Assuming this still fetches data we need
 
 export const metadata: Metadata = {
   title: 'XLR vs USB Microphones: Complete Guide 2025 | NextGenStreamer',
@@ -120,8 +121,40 @@ export default function XLRvsUSBMicrophonesPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {blueYeti && <AmazonProductCard product={blueYeti} />}
-              {hyperxSoloCast && <AmazonProductCard product={hyperxSoloCast} />}
+              {blueYeti && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {blueYeti.imageUrl && (
+                    <div className="w-full h-48 relative overflow-hidden">
+                     <Image src={blueYeti.imageUrl} alt={blueYeti.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={blueYeti.name}>{blueYeti.name}</h4>
+                    {blueYeti.amazonUrl && (
+                      <a href={blueYeti.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+              {hyperxSoloCast && (
+                 <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {hyperxSoloCast.imageUrl && (
+                    <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={hyperxSoloCast.imageUrl} alt={hyperxSoloCast.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={hyperxSoloCast.name}>{hyperxSoloCast.name}</h4>
+                    {hyperxSoloCast.amazonUrl && (
+                      <a href={hyperxSoloCast.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="bg-blue-50 rounded-xl p-6">
@@ -185,8 +218,40 @@ export default function XLRvsUSBMicrophonesPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {shureSM7B && <AmazonProductCard product={shureSM7B} />}
-              {shureMV6 && <AmazonProductCard product={shureMV6} />}
+              {shureSM7B && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {shureSM7B.imageUrl && (
+                     <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={shureSM7B.imageUrl} alt={shureSM7B.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={shureSM7B.name}>{shureSM7B.name}</h4>
+                    {shureSM7B.amazonUrl && (
+                      <a href={shureSM7B.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+              {shureMV6 && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {shureMV6.imageUrl && (
+                    <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={shureMV6.imageUrl} alt={shureMV6.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={shureMV6.name}>{shureMV6.name}</h4>
+                    {shureMV6.amazonUrl && (
+                      <a href={shureMV6.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="bg-purple-50 rounded-xl p-6">
@@ -247,7 +312,23 @@ export default function XLRvsUSBMicrophonesPage() {
             </p>
             
             <div className="max-w-md mx-auto mb-8">
-              {audioInterface && <AmazonProductCard product={audioInterface} />}
+              {audioInterface && (
+                <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                  {audioInterface.imageUrl && (
+                    <div className="w-full h-48 relative overflow-hidden">
+                      <Image src={audioInterface.imageUrl} alt={audioInterface.name} fill style={{ objectFit: 'contain' }} className="p-4" />
+                    </div>
+                  )}
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-1 truncate" title={audioInterface.name}>{audioInterface.name}</h4>
+                    {audioInterface.amazonUrl && (
+                      <a href={audioInterface.amazonUrl} target="_blank" rel="noopener noreferrer nofollow" className="mt-auto inline-block text-center bg-brand-primary text-white font-semibold py-2 px-3 rounded-md hover:bg-brand-primary-hover transition-colors text-xs">
+                        Check Price
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
