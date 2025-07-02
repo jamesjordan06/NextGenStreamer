@@ -104,7 +104,10 @@ export default function Navigation() {
         </div>
 
         {/* Mobile menu */}
-        <div className={`md:hidden transition-all ease-in-out duration-300 overflow-hidden ${isOpen ? 'max-h-[calc(100vh-70px)] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}> {/* Adjusted max-h for potentially more items and padding */}
+        <div
+          className={`md:hidden transition-all ease-in-out duration-300 overflow-hidden ${isOpen ? 'opacity-100 pb-4' : 'opacity-0'}`}
+          style={{ maxHeight: isOpen ? 'calc(100vh - 70px)' : '0' }}
+        >
           <div className="space-y-1 pt-2 pb-3 border-t border-border-neutral-light"> {/* Reduced space-y for tighter packing */}
 
             <MobileNavLink href="/getting-started" title="Getting Started" onClick={() => setIsOpen(false)} description="New to streaming? Start here!"/>
