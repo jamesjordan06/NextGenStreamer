@@ -69,6 +69,27 @@ export default function RootLayout({
           async
           crossOrigin="anonymous"
         />
+        <Script
+          src="https://cmp.gatekeeperconsent.com/min.js"
+          strategy="afterInteractive"
+          data-cfasync="false"
+        />
+        <Script
+          src="https://the.gatekeeperconsent.com/cmp.min.js"
+          strategy="afterInteractive"
+          data-cfasync="false"
+        />
+        <Script
+          src="//www.ezojs.com/ezoic/sa.min.js"
+          strategy="afterInteractive"
+          async
+        />
+        <Script id="ezstandalone-init" strategy="afterInteractive">
+          {`
+            window.ezstandalone = window.ezstandalone || {};
+            ezstandalone.cmd = ezstandalone.cmd || [];
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
